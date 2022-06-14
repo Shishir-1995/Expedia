@@ -92,6 +92,13 @@
             align-items: center;
         }
         @media all and (min-width: 768px) and (max-width: 1024px) {
+            #navbar >div:nth-child(2) {
+                width: 10%;
+                height: 80%;
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+            
             #top {
                 width: 40%; 
             }

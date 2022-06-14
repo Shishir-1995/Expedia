@@ -32,10 +32,12 @@
             width: 90%;
             display: grid;
             grid-template-columns: repeat(5,1fr);
-            grid-template-rows: repeat(1,250px);
+            /* grid-template-rows: repeat(1,250px); */
             justify-content: center;
             margin: auto;
             margin-top: 50px;
+            grid-template-areas: 
+            "b1 b2 b3 b4 b5";
         }
         #container>div{
             height: 100%;
@@ -56,9 +58,9 @@
             text-decoration: none;
            
         }
-        @media all and (min-width:400px) and (max-width:720px){
+        @media all and (max-width:720px){
             #container{
-            display: grid;
+            
             grid-template-columns: repeat(2,1fr);
             /* grid-template-rows: repeat(3,auto); */
             grid-template-areas: 
@@ -66,6 +68,14 @@
             "b2 b3"
             "b4 b5";
            }
+        }
+        @media all and (min-width:720px) and (max-width:1000px){
+            #container{
+                grid-template-columns: repeat(4,1fr);
+                grid-template-areas: 
+            "b1 b1 b1 b1"
+            "b2 b3 b4 b5"
+            }
         }
         #spe{
             margin-top: 25px;

@@ -56,8 +56,16 @@
             text-decoration: none;
            
         }
-        @media all and (min-width:320px) and (max-width:479px){
-            
+        @media all and (min-width:400px) and (max-width:720px){
+            #container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,auto);
+            grid-template-areas: 
+            "b1 b1"
+            "b2 b3"
+            "b4 b5";
+        }
         }
         #spe{
             margin-top: 25px;
@@ -74,16 +82,31 @@
             margin-top: 35px;
             width: 90%;
         }
+        #b1{
+            grid-area: b1;
+        }
+        #b2{
+            grid-area: b2;
+        }
+        #b3{
+            grid-area: b3;
+        }
+        #b4{
+            grid-area: b4;
+        }
+        #b5{
+            grid-area: b5;
+        }
     </style>
 </head>
 <body>
     <h3 class="heading">Be inspired and discover more with Expedia</h3>
     <p><a href="">Discover new places and experiences</a></p>
     <div id="container">
-        <div>
+        <div id="b1">
             <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg" alt="">
         </div>
-        <div>
+        <div id="b2">
             <h3>Company</h3>
            <p><a href="https://www.expediagroup.com/home/default.aspx">About</a></p> 
             <p><a href="https://lifeatexpediagroup.com/">Jobs</a></p>
@@ -93,7 +116,7 @@
             <p><a href="https://ir.expediagroup.com/investors-overview/default.aspx">Investor Relations</a></p>
             <p><a href="https://advertising.expedia.com/getting-started/brands/expedia/">Advertising</a></p>
         </div>
-        <div>
+        <div id="b3">
             <h3>Explore</h3>
            <p> <a href="https://www.expedia.com/United-States-Of-America.dx201">United States of America travel guide</a></p>
             <p><a href="https://www.expedia.com/Destinations-In-United-States-Of-America.d201.Hotel-Destinations">Hotels in United States of America</a></p>
@@ -103,7 +126,7 @@
             <p><a href="https://www.expedia.com/Destinations-In-United-States-Of-America.d201.Car-Rental-Destinations">Car rentals in United States of America</a></p>
             <p><a href="https://www.expedia.com/Accommodations">All accommodation types</a></p>
         </div>
-        <div>
+        <div id="b4">
             <h3>Terms and Policies</h3>
             <p><a href="https://www.expedia.com/lp/lg-privacypolicy">Privacy policy</a></p>
             <p><a href="https://www.expedia.com/lp/lg-legal">Terms of use</a></p>
@@ -112,7 +135,7 @@
             <p><a href="https://www.expedia.com/p/info-other/web-accessibility-policy">Accessibility</a></p>
             <p><a href="https://www.expedia.com/dnsmpi">Do not sell my personal information</a></p>
         </div>
-        <div>
+        <div id="b5">
             <h3>Help</h3>
             <p><a href="https://www.expedia.com/service/">Support</a></p>
             <p><a href="https://www.expedia.com/service/#/articles/399/34/12326">Cancel your hotel or vacation rental booking</a></p>

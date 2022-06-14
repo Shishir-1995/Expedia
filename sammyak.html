@@ -29,16 +29,16 @@
             text-decoration: none;
         }
         #container{
-            margin: auto;
             width: 90%;
-            display: flex;
-            height: 225px;
-            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(1,250px);
+            justify-content: center;
+            margin: auto;
+            margin-top: 50px;
         }
         #container>div{
-            width: 19.2%;
             height: 100%;
-            margin-right: 2px;
         }
         #container>div>h3{
             font-size: 14px;
@@ -68,7 +68,8 @@
             margin-top: 18px;
         }
         hr{
-            margin-top: 60px;
+            margin-top: 35px;
+            width: 90%;
         }
     </style>
 </head>

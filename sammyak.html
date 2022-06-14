@@ -60,12 +60,12 @@
             #container{
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(3,auto);
+            /* grid-template-rows: repeat(3,auto); */
             grid-template-areas: 
             "b1 b1"
             "b2 b3"
             "b4 b5";
-        }
+           }
         }
         #spe{
             margin-top: 25px;
@@ -74,6 +74,7 @@
             color: #343b53;
             text-align: center;
             line-height: 2px;
+            
         }
         img{
             margin-top: 18px;
@@ -82,19 +83,19 @@
             margin-top: 35px;
             width: 90%;
         }
-        #b1{
+        b1{
             grid-area: b1;
         }
-        #b2{
+        b2{
             grid-area: b2;
         }
-        #b3{
+        b3{
             grid-area: b3;
         }
-        #b4{
+        b4{
             grid-area: b4;
         }
-        #b5{
+        b5{
             grid-area: b5;
         }
     </style>

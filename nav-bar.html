@@ -65,6 +65,34 @@
      .nvdrp{
       margin-right: 5%;
      }
+     #drop-text{
+      font-weight: 600;
+      font-size: large;
+      width: min-content;
+     }
+
+     #drop-btn-primary{
+      background-color: blue;
+      color: white;
+      text-align: center;
+      width: 90%;
+      font-size: large;
+      font-weight: 600;
+      height: max-content;
+      margin: auto;
+      border-radius: 10px;
+     }
+     #drop-btn{
+      margin-top: 20px;
+      color: blue;
+      text-align: center;
+      width: 90%;
+      font-size: large;
+      font-weight: 600;
+      height: max-content;
+      margin: auto;
+      border-radius: 10px;
+     }
      
 
     </style>
@@ -112,13 +140,13 @@
                 <a class="nav-link active" aria-current="page" href="#" id="hov">Trips</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active" href="#" id="navbarDropdown " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Sign in
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end nvdrp" aria-labelledby="navbarDropdown">
-                  <li><p class="dropdown-item">Members can acess discounts and special features</p></li>
-                  <li><a class="dropdown-item" href="#">Sign in</a></li>
-                  <li><a class="dropdown-item" href="#">Create a free accounts</a></li>
+                  <li><p class="dropdown-item" id="drop-text">Members can access discounts and <br> special features</p></li>
+                  <li><a class="dropdown-item" href="#" id="drop-btn-primary">Sign in</a></li>
+                  <li><a class="dropdown-item" href="#" id="drop-btn">Create a free account</a></li>
                   <li><a class="dropdown-item" href="#">List of favourites</a></li>
                   <li><a class="dropdown-item" href="#">Expedia Rewards</a></li>
                   <li><hr class="dropdown-divider"></li>

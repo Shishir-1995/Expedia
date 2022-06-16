@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>Sign-Up</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      img {
+        display: block;
+        margin: auto;
+        width: 160px;
+        padding: 13px;
+        margin-top: -4px;
+        margin-bottom: -2px;
+      }
+
+      hr {
+        border: 0.4px solid rgb(236, 233, 233);
+      }
+
+      #form {
+        width: 26%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        width: 100%;
+        height: 48px;
+        border-radius: 7px;
+        border: 1px solid;
+        padding-left: 10px;
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+      }
+
+      #head {
+        line-height: 75px;
+      }
+
+      h1 {
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 645;
+        font-size: 32px;
+        padding-top: 14px;
+        padding-bottom: 7px;
+      }
+
+      .checkbox {
+        width: 18px;
+        height: 18px;
+        font-size: smaller;
+        display: inline;
+      }
+
+      #align {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      #align2 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+      }
+      #align2 > .checkbox {
+        width: 40px;
+        margin-left: -4px;
+      }
+
+      label {
+        padding: 10px;
+      }
+      label > p {
+        margin-top: -10px;
+      }
+
+      button {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgba(54, 98, 216, 0.3);
+        border: 0px;
+        font-size: medium;
+        color: white;
+        font-weight: 600;
+      }
+
+      #images {
+        width: 100px;
+        height: 80px;
+        display: flex;
+        margin: auto;
+        padding-right: 63px;
+        margin-top: -10px;
+      }
+      a > img {
+        width: 40px;
+        aspect-ratio: 1;
+      }
+
+      #bottom {
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      #links {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      a {
+        color: #3662d8;
+        text-decoration: none;
+        display: inline;
+      }
+      .pwd {
+        position: relative;
+      }
+      .p-viewer {
+        z-index: 9999;
+        position: absolute;
+        top: 0%;
+        right: 10px;
+      }
+
+      .fa-eye {
+        color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="head">
+      <img
+        src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27"
+        alt=""
+      />
+    </div>
+    <hr />
+    <div id="">
+      <form id="form">
+        <h1>Create an account</h1>
+        <div id="head">
+          <input id="email" type="text" placeholder="Email address" />
+          <input type="text" id="name" placeholder="First name" />
+          <input type="text" id="surname" placeholder="Surname" />
+          <div class="pwd">
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              id="password"
+            />
+            <span class="p-viewer">
+              <i class="fa fa-eye" aria-hidden="true" id="togglePassword"></i>
+            </span>
+          </div>
+        </div>
+        <div id="align">
+          <input type="checkbox" id="c1" class="checkbox" />
+          <label for="">This is a public or shared device</label><br />
+        </div>
+        <div id="align2">
+          <input type="checkbox" id="c2" class="checkbox" />
+          <label for="">
+            <p>
+              I'd like to receive travel deals, special offers and other
+              information from Expedia via email.
+            </p></label
+          >
+        </div>
+        <div id="links">
+          <p>
+            By creating an account, I agree to the Expedia
+            <a href="https://www.expedia.co.in/lp/lg-termsofuse"
+              >Terms and Conditions,</a
+            >
+            <a href="https://www.expedia.co.in/lp/lg-privacypolicy"
+              >Privacy Statement
+            </a>
+            and
+            <a href="https://www.expedia.co.in/lp/b/exp-rewards-terms"
+              >Expedia Rewards Terms and Conditions.</a
+            >
+          </p>
+        </div>
+        <button>Continue</button>
+        <div id="bottom">
+          <p>Already have an account? <a href="">Sign in</a></p>
+          <br />
+          <p>or continue with</p>
+          <br />
+          <div id="images">
+            <a
+              href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=com.expedia.ul.booking.release&response_mode=form_post&scope=name%20email&state=Tc9mbrH78kFUA5TLcsEpUxmFuAbuTmG-y2bLhUTaFkc&nonce=XQ3h4wiADJP3fR6bzmGBZdL7xAXY46GNM639wI5Yb6s&redirect_uri=https://www.expedia.co.in/eg-auth-svcs/api/v1/oauth2/callback/apple-web&locale=en_GB"
+              ><img src="https://a.travel-assets.com/egds/marks/apple.svg"
+            /></a>
+            <a
+              href="https://www.facebook.com/login.php?skip_api_login=1&api_key=131538103586818&kid_directed_site=0&app_id=131538103586818&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv11.0%2Fdialog%2Foauth%3Fresponse_type%3Dcode%26client_id%3D131538103586818%26response_mode%3Dquery%26scope%3Dpublic_profile%2Bemail%26state%3DGDxzZCbk-ifbmEfL820VxAYWK9U3RVbTe1dEIirivsw%26redirect_uri%3Dhttps%253A%252F%252Fwww.expedia.co.in%252Feg-auth-svcs%252Fapi%252Fv1%252Foauth2%252Fcallback%252Ffacebook-web%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Db52de4a7-d8b3-4cf2-8f0a-a3b3ab094799%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.expedia.co.in%2Feg-auth-svcs%2Fapi%2Fv1%2Foauth2%2Fcallback%2Ffacebook-web%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DGDxzZCbk-ifbmEfL820VxAYWK9U3RVbTe1dEIirivsw%23_%3D_&display=page&locale=en_GB&pl_dbl=0"
+              ><img src="https://a.travel-assets.com/egds/marks/facebook.svg"
+            /></a>
+            <a
+              href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&client_id=919023678118-cdrmliol1m0qorr1hm0oe877pnrd02rb.apps.googleusercontent.com&response_mode=query&scope=openid%20profile%20email&state=AYUpsk1pmtfa98p6tsTSOsZLDQhALVYXiAMzU8ddwP8&nonce=M1qwYwUbiChmYZjjfjSvNfF8LUsoRGq0sOINkgKGphM&redirect_uri=https%3A%2F%2Fwww.expedia.co.in%2Feg-auth-svcs%2Fapi%2Fv1%2Foauth2%2Fcallback%2Fgoogle-web&flowName=GeneralOAuthFlow"
+              ><img src="https://a.travel-assets.com/egds/marks/google.svg"
+            /></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#password");
+
+    togglePassword.addEventListener("click", function (e) {
+      // toggle the type attribute
+      const type =
+        password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+      // toggle the eye slash icon
+      this.classList.toggle("fa-eye-slash");
+    });
+  </script>
+</html>

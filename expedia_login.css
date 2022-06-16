@@ -10,6 +10,14 @@
             margin: auto;
            
         }
+        #align {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-left: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
         h1 {
             margin-top: 30px;
             margin-bottom: 20px;
@@ -30,11 +38,10 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             letter-spacing: 0.1ch;
         }
-        #c_box{
-            width: 17px;
-            height: 17px;
-            margin-top: 10px;
-            margin-bottom: 20px;
+        #c1{
+            width: 19px;
+            height: 19px;
+            
         }
         p{
             font-size: 13px;

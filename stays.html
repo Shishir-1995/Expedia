@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking Section</title>
+    <title>Stays</title>
     <style>
       #main {
         border: 1px solid grey;
-        width: 80%;
+        width: 90%;
         margin: auto;
         border-radius: 10px;
       }
@@ -21,6 +21,10 @@
           Roboto, "Helvetica Neue", Arial, sans-serif;
         font-synthesis: none;
         justify-content: space-evenly;
+      }
+      #stays>a,#flght>a{
+        text-decoration: none;
+        color: black;
       }
       #main > #bookingcart > p:hover {
         border-bottom: 3px solid #3662db;
@@ -89,7 +93,7 @@
         height: 50%;
         margin-top: 1%;
       }
-      button {
+      #search {
         padding: 15px 60px 15px 60px;
         font-weight: bold;
         border-radius: 10px;
@@ -210,13 +214,14 @@
           padding: 10px 20px 10px 20px;
         }
       }
+
     </style>
   </head>
   <body>
     <div id="main">
       <div id="bookingcart">
-        <p>Stays</p>
-        <p>Flights</p>
+        <p id="stays"><a href="stays.html">Stays</a></p>
+        <p id="flght"><a href="flight.html">Flights</a></p>
         <p>Cars</p>
         <p>Packages</p>
         <p>Things to do</p>
@@ -271,6 +276,7 @@
           >
         </div>
       </div>
+      <div id="container"></div>
       <div id="btn">
         <button id="search">Search</button>
       </div>

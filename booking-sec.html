@@ -11,6 +11,7 @@
             height: 5em;
             border: 1px solid;
             margin: auto;
+            box-sizing: border-box;
         }
         .contain-box>ul{
             display: flex;
@@ -29,6 +30,17 @@
             color: blue;
             padding-bottom: 2.3em;
         }
+        .nav-item-container{
+            position: relative;
+            margin: auto;
+        }
+        .nav-items{
+            display: none;
+        }
+        .nav-item-stays>form{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+        }
     </style>
 </head>
 <body>
@@ -40,8 +52,27 @@
             <li>Packages</li>
             <li>Things to do</li>
         </ul>
-        <div class="box-item">
-            
+        <div class="nav-item-container">
+            <div class="nav-items-stays"> 
+                <form action="">
+                    <input type="text"><input type="datetime"><input type="datetime"><input type="text">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="submit" name="" id="submit-btn">
+                </form>
+            </div>
+            <div class="nav-items">
+                <form action=""></form>
+            </div>
+            <div class="nav-items">
+                <form action=""></form>
+            </div>
+            <div class="nav-items">
+                <form action=""></form>
+            </div>
+            <div class="nav-items">
+                <form action=""></form>
+            </div>
         </div>
     </div>
     

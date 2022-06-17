@@ -1,0 +1,291 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+.dropdown-item{
+  width: 375px;
+}
+.dropdown-menu{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 0;
+}
+svg{
+  width: 30px;
+  height: 40px;
+  display: block;
+  float: left;
+}
+li a{
+  height: 44px;
+  padding: 0;
+}
+
+.uitk-icon{
+width: 18px;
+margin-top: -7px;
+margin-right: 4px;
+}
+.navbar{
+border-bottom: 1px solid rgb(185, 184, 184);
+height: 5.6em;
+
+}
+.container{
+
+margin-left: 4em;
+margin-right: 4em;
+
+}
+
+#navbarDropdown:hover,#hov:hover{
+color: blue;
+fill: blue;
+}
+#side-nav{
+margin-right: -8em;
+}
+#side-nav>li{
+margin-right: 1em;
+}
+.nvdrp{
+margin-right: 5%;
+}
+#drop-text{
+font-weight: 600;
+font-size: large;
+width: min-content;
+}
+
+#drop-btn-primary{
+background-color: blue;
+color: white;
+text-align: center;
+width: 90%;
+font-size: large;
+font-weight: 600;
+height: max-content;
+margin: auto;
+border-radius: 10px;
+}
+#drop-btn{
+margin-top: 20px;
+color: blue;
+text-align: center;
+width: 90%;
+font-size: large;
+font-weight: 600;
+height: max-content;
+margin: auto;
+border-radius: 10px;
+}
+
+
+
+
+.box1 {
+background-image: url(https://a.travel-assets.com/travel-assets-manager/ux-887/Global-HP-Hero-928x398.jpg);
+background-color: rgba(0, 0, 0, 0.493);
+background-blend-mode: multiply;
+width: 90%;
+margin: auto;
+background-size: cover;
+height: fit-content;
+border-radius: 10px;
+
+margin-bottom: 20px;
+}
+
+.box1-content {
+display: flex;
+flex-wrap: wrap;
+margin-left: 3em;
+align-items: center;
+width: 30%;
+padding-top: 5em;
+color: white;
+font-weight: 600;
+
+}
+
+.box1-content button {
+width: 200px;
+padding: 10px;
+background-color: blue;
+color: white;
+border-radius: 10px;
+border: 0;
+margin-bottom: 5em;
+}
+
+.box2 {
+margin-top: 200px;
+background-image: url("https://a.travel-assets.com/travel-assets-manager/gmvd-1482-bookearly-emea/667x320.jpg");
+background-size: cover;
+border-radius: 20px;
+box-shadow: inset 0 -100px 200px 10px rgb(0, 0, 0);
+width: 90%;
+height: 248px;
+margin: auto;
+text-rendering: geometricPrecision;
+display: flex;
+flex-direction: column-reverse;
+font-size: large;
+font-weight: 600;
+color: white;
+margin-bottom: 20px;
+}
+.box-3{
+display: flex;
+height: 50vh;
+width: 90%;
+margin: auto;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.box-3 img{
+    height: 90%;
+    padding: 5px;
+  }
+
+
+.box3-content{
+    padding: 0 5px;
+    width: 450px;
+}
+.box-3 .side-img{
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+  }
+
+.box-3 input{
+height: 3em;
+border-radius: 5px;
+margin: 5px;
+padding: 1em;
+}
+.box-3 input:last-child{
+border: 0;
+background-color: blue;
+color: white;
+padding: 1em 3em;
+}
+
+
+
+
+
+.heading{
+      text-align: center;
+      font-weight: 900;
+      font-size: 14px;
+      color:  #141D38;
+      line-height: 2px;
+      /* font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
+      font-weight: 500;
+      margin-bottom: 30px;
+
+  }
+  .heading+p{
+      text-align: center;
+      font-size: 14px;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 2px;
+      
+  }
+  .heading+p>a{
+      font-size: 14px;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #3662d8;
+      text-decoration: none;
+  }
+  #container{
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      /* grid-template-rows: repeat(1,250px); */
+      justify-content: center;
+      margin: auto;
+      margin-top: 50px;
+      grid-template-areas: 
+      "b1 b2 b3 b4 b5";
+  }
+  #container>div{
+      height: 100%;
+  }
+  #container>div>h3{
+      font-size: 14px;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #141d38;
+      font-weight: 500;
+  }
+  #container>div>p{
+      font-size: 12px;
+      width: 80%;
+  }
+  #container>div>p>a{
+      color: #3662d8;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      text-decoration: none;
+     
+  }
+  @media all and (max-width:720px){
+      #container{
+      grid-template-columns: repeat(2,1fr);
+      /* grid-template-rows: repeat(3,auto); */
+      grid-template-areas: 
+      "b1 b1"
+      "b2 b3"
+      "b4 b5";
+     }
+     .box-3 img{
+        display: none;
+     }
+  }
+  @media all and (min-width:720px) and (max-width:1000px){
+      #container{
+          grid-template-columns: repeat(4,1fr);
+          grid-template-areas: 
+      "b1 b1 b1 b1"
+      "b2 b3 b4 b5"
+      }
+  }
+  #spe{
+      margin-top: 25px;
+      font-size: 12px;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #343b53;
+      text-align: center;
+      line-height: 2px;
+      
+  }
+  img{
+      margin-top: 18px;
+  }
+  hr{
+      margin-top: 35px;
+      width: 90%;
+  }
+  #b1{
+      grid-area: b1;
+  }
+  #b2{
+      grid-area: b2;
+  }
+ #b3{
+      grid-area: b3;
+  }
+  #b4{
+      grid-area: b4;
+  }
+  #b5{
+      grid-area: b5;
+  }
+  #last>img{
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }

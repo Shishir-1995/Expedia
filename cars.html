@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Things To Do</title>
+    <title>Flights</title>
     <style>
       #main {
         border: 1px solid grey;
@@ -40,14 +40,34 @@
         background-color: rgb(224, 217, 217);
       }
       #select {
-        grid-template-columns: 55% 20% 20%;
-        grid-template-rows: 50px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 50px 50px;
         display: grid;
         margin: auto;
-        width: auto;
+        width: 96%;
         margin-top: 1%;
-        margin-left: 3.5%;
         gap: 10px;
+        grid-template-areas:
+          "pckkup pckkup drpoff drpoff"
+          "pckd drpd pckt drpt";
+      }
+      .divI {
+        grid-area: pckkup;
+      }
+      .divII {
+        grid-area: drpoff;
+      }
+      .divIII {
+        grid-area: pckd;
+      }
+      .divIV {
+        grid-area: drpd;
+      }
+      .divV {
+        grid-area: pckt;
+      }
+      .divVI {
+        grid-area: drpt;
       }
       .choose {
         border: 1px solid grey;
@@ -62,13 +82,9 @@
       .choose:hover {
         border: 2px solid #3662db;
       }
-      .divI {
-        /* width: 155%; */
-        font-size: 15px;
-      }
       .choose > img {
-        width: 3%;
-        margin-right: 2%;
+        width: 4%;
+        margin-right: 2.5%;
         height: 50%;
         margin-top: 1%;
         /* border: 1px solid; */
@@ -79,14 +95,17 @@
         position: absolute;
         margin: 7px 0px 10px 45px;
       }
+      #pckup {
+        margin-top: 0.7%;
+        font-size: 17px;
+      }
       .choose > .imge {
         width: 8%;
         height: 50%;
         margin-top: 1%;
       }
-      #things{
-        margin-top: 1%;
-        margin-left: 2.5%;
+      #pckup {
+        margin-top: 0.8%;
       }
       button {
         padding: 15px 60px 15px 60px;
@@ -107,35 +126,77 @@
         margin-top: 1.5%;
         font-weight: 600;
       }
+      #transport {
+        display: flex;
+        width: 30%;
+        justify-content: space-around;
+        margin-left: 3%;
+      }
+      #transport > p {
+        padding: 3% 8% 3% 8%;
+        border-radius: 10px;
+        border: 0px solid grey;
+      }
+      #transport > p:hover {
+        background-color: #e7ecfd;
+        color: #5166d1;
+        font-weight: 600;
+      }
       @media all and (min-width: 501px) and (max-width: 990px) {
         .divI {
-          grid-area: th;
+          grid-area: pckkup;
         }
         .divII {
-          grid-area: fr;
+          grid-area: drpoff;
         }
         .divIII {
-          grid-area: to;
+          grid-area: pckd;
         }
-        #main{
-            width: 90%;
+        .divIV {
+          grid-area: drpd;
+        }
+        .divV {
+          grid-area: pckt;
+        }
+        .divVI {
+          grid-area: drpt;
+        }
+        #main {
+          width: 90%;
         }
         #select {
-          grid-template-columns: 26% 25% 20% 20%;
-          grid-template-rows: 50px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 50px);
           grid-template-areas:
-            "th th fr to"
+            "pckkup drpoff"
+            "pckd drpd"
+            "pckt drpt";
         }
         .choose > p {
           margin: 7px 0px 5px 43px;
         }
+        #transport {
+          width: 60%;
+          margin-left: 4%;
+        }
+        #transport > p {
+          margin-left: 2%;
+          width: 100%;
+          padding: 5%;
+          border: 0;
+          text-align: center;
+          font-size: 14px;
+        }
         .divI > img {
-          width: 8%;
-          height: 50%;
+          width: 6%;
+          height: 40%;
+        }
+        .choose {
+          margin-left: 2%;
         }
         .choose > .imge {
-          width: 15%;
-          height: 50%;
+          width: 6%;
+          height: 40%;
           margin-top: 1%;
         }
         #select > div > p + p {
@@ -149,45 +210,64 @@
         #btn {
           margin-left: 38%;
         }
-        #things{
-            margin-left:5%;
-            margin-top: 1.6%;
-        }
       }
       @media all and (min-width: 200px) and (max-width: 500px) {
         .divI {
-          grid-area: th;
+          grid-area: pckkup;
         }
         .divII {
-          grid-area: fr;
+          grid-area: drpoff;
         }
         .divIII {
-          grid-area: to;
+          grid-area: pckd;
         }
-        #main{
+        .divIV {
+          grid-area: drpd;
+        }
+        .divV {
+          grid-area: pckt;
+        }
+        .divVI {
+          grid-area: drpt;
+        }
+        #main {
           width: 90%;
         }
         #select {
-          grid-template-columns: 44% 44%;
-          grid-template-rows: 50px 50px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 50px);
           grid-template-areas:
-            "th th"
-            "fr to"
+            "pckkup drpoff"
+            "pckd drpd"
+            "pckt drpt";
         }
+        #transport {
+          width: 88%;
+          margin-left: 4%;
+        }
+        #transport > p {
+          margin-left: 2%;
+          width: 100%;
+          padding: 6%;
+          border: 0;
+          text-align: center;
+          font-size: 13px;
+        }
+
         .choose > p {
           margin: 4px 0px 10px 40px;
         }
         .divI > img {
-          width: 6%;
+          width: 5%;
           height: 40%;
         }
         .choose > .imge {
-          width: 11%;
+          width: 13%;
           height: 42%;
           margin-top: 1%;
         }
         #select > div > p + p {
-          margin-top: 4%;
+          margin-top: 5%;
           font-weight: 600;
         }
         #bookingcart {
@@ -200,10 +280,14 @@
         #search {
           padding: 10px 20px 10px 20px;
         }
-        #things {
-          margin-top: 1.9%;
+        #pckup {
+          margin-top: 2.5%;
           margin-left: 7%;
           font-size: 17px;
+        }
+        .divIII > .imge {
+          width: 5%;
+          height: 40%;
         }
       }
     </style>
@@ -218,31 +302,60 @@
         <p id="thngs"><a href="ThingsToDo.html">Things To Do</a></p>
       </div>
       <hr />
+      <div id="transport">
+        <p>Car hire</p>
+        <p>Airpot transport</p>
+      </div>
       <div id="select">
         <div class="choose divI">
           <img
             src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
             alt=""
           />
-          <p id="things">Things to do in</p>
+          <p id="pckup">Pick-up</p>
         </div>
         <div class="choose divII">
           <img
-            class="imge"
-            src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
-            alt="calender"
+            src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
+            alt=""
           />
-          <p>From</p>
-          <p class="info">1 JUL</p>
+          <p id="pckup">Same as Pick-up</p>
         </div>
         <div class="choose divIII">
           <img
             class="imge"
             src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
+            alt=""
+          />
+          <p>Pick-up date</p>
+          <p class="info">1 JUL</p>
+        </div>
+        <div class="choose divIV">
+          <img
+            class="imge"
+            src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
             alt="calender"
           />
-          <p>To</p>
+          <p>Drop-off date</p>
           <p class="info">2 JUL</p>
+        </div>
+        <div class="choose divV">
+          <img
+            class="imge"
+            src="https://cdn-icons-png.flaticon.com/512/59/59252.png"
+            alt="time"
+          />
+          <p>Pick-up time</p>
+          <p class="info">10:30</p>
+        </div>
+        <div class="choose divVI">
+          <img
+            class="imge"
+            src="https://cdn-icons-png.flaticon.com/512/59/59252.png"
+            alt="time"
+          />
+          <p>Drop-off time</p>
+          <p class="info">10:30</p>
         </div>
       </div>
       <div id="btn">

@@ -1,7 +1,7 @@
 
 let form = document.querySelector("form")
 
-let user_arr = JSON.parse(localStorage.getItem("userData")) || [];
+let user_arr = JSON.parse(localStorage.getItem("userData")) ;
 
 form.addEventListener("submit",function(event){
     event.preventDefault();
@@ -13,6 +13,7 @@ form.addEventListener("submit",function(event){
     if (check_credential(userObj.user_email,userObj.user_password)==true){
         localStorage.setItem("login",JSON.stringify(userObj));
         alert("login successful !")
+        window.location.href = "../nav-bar.html"
     }else {
         alert("invalid email id or password !")
     }
@@ -21,7 +22,7 @@ form.addEventListener("submit",function(event){
 
 function check_credential (user_email,user_password){
     let filtered = user_arr.filter(function(elem){
-        return elem.user_email === user_email && elem.user_password === user_password;
+        return elem.email === user_email && elem.password === user_password;
     })
     
     if (filtered.length > 0){

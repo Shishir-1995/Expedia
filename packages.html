@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stays</title>
+    <title>Packages</title>
     <style>
       #main {
         border: 1px solid grey;
@@ -22,6 +22,10 @@
         font-synthesis: none;
         justify-content: space-evenly;
       }
+      #main > #bookingcart > p:hover {
+        border-bottom: 3px solid #3662db;
+        margin-bottom: 7px;
+      }
       #stays > a,
       #flght > a,
       #thngs > a,
@@ -29,22 +33,18 @@
         text-decoration: none;
         color: black;
       }
-      #main > #bookingcart > p:hover {
-        border-bottom: 3px solid #3662db;
-        margin-bottom: 7px;
-      }
       hr {
         margin-top: -2px;
         width: 95%;
         background-color: rgb(224, 217, 217);
       }
       #select {
-        grid-template-columns: 40% 15% 15% 24%;
+        grid-template-columns: 31% 2% 31% 15% 15%;
         grid-template-rows: 50px;
         display: grid;
         margin: auto;
         width: auto;
-        margin-top: 2%;
+        margin-top: 1%;
         margin-left: 3.5%;
         gap: 10px;
       }
@@ -64,6 +64,12 @@
       .divI {
         /* width: 155%; */
         font-size: 15px;
+        overflow: hidden;
+        margin-right: -6%;
+      }
+      .divIII {
+        overflow: hidden;
+        margin-left: -3.5%;
       }
       .choose > img {
         width: 6%;
@@ -76,33 +82,28 @@
       .choose > p {
         /* border: 1px solid; */
         position: absolute;
-        margin: 7px 0px 10px 43px;
+        margin: 7px 0px 10px 45px;
       }
       #going {
-        margin-top: 0.9%;
+        margin-top: 0.7%;
         font-size: 17px;
       }
-      #checkit {
-        /* border: 1px solid red; */
-        display: flex;
-        width: 22%;
-        height: auto;
-        margin-top: 2%;
-        margin-left: 3.5%;
-        justify-content: space-between;
-      }
       .choose > .imge {
-        width: 9%;
+        width: 6%;
         height: 50%;
         margin-top: 1%;
       }
-      #search {
+      #Leaving {
+        margin-top: 0.8%;
+      }
+      button {
         padding: 15px 60px 15px 60px;
         font-weight: bold;
         border-radius: 10px;
         border: 0;
         background-color: #3662db;
         color: white;
+        margin-top: 8%;
       }
       #btn {
         width: 15.5%;
@@ -110,58 +111,78 @@
         margin-top: 10px;
         margin-bottom: 20px;
       }
-      #checkboxflight,
-      #checkboxcar {
-        margin: 0px 8px;
-        transform: scale(1.5);
-      }
-
-      #checkit + label {
-        color: #343b53;
-      }
       #select > div > p + p {
         margin-top: 1.5%;
         font-weight: 600;
       }
-
+      .divII {
+        margin-top: 8px;
+        border-radius: 30px;
+        height: 28px;
+        width: 100%;
+      }
+      .divII > .icon {
+        margin-left: 5%;
+        margin-top: 7%;
+      }
+      .icon {
+        height: 1.5rem;
+        min-width: 1.5rem;
+        width: 1.5rem;
+        transform: rotate(90deg);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      #checkboxneed{
+        transform: scale(1.5);
+        margin-top: 3%;
+      }
+      label{
+        margin-left:3%;
+      }
       @media all and (min-width: 501px) and (max-width: 990px) {
         .divI {
-          grid-area: Go;
+          grid-area: lv;
         }
         .divII {
-          grid-area: Cin;
+          grid-area: arw;
         }
         .divIII {
-          grid-area: Cout;
+          grid-area: go;
         }
         .divIV {
-          grid-area: Trvl;
+          grid-area: dep;
+        }
+        .divV {
+          grid-area: retrn;
         }
         #main{
-          width: 90%;
+            width: 90%;
         }
         #select {
-          grid-template-columns: 47.5% 47.5%;
-          grid-template-rows: repeat(3, 50px);
+          grid-template-columns: 44% 2% 2% 44%;
+          grid-template-rows: repeat(2, 50px);
           grid-template-areas:
-            "Go Go"
-            "Cin Cout"
-            "Trvl Trvl";
+            "lv arw arw go"
+            "dep dep retrn retrn";
         }
         .choose > p {
-          margin: 5px 0px 10px 43px;
+          margin: 7px 0px 5px 43px;
         }
         .divI > img {
-          width: 4%;
+          width: 6%;
           height: 40%;
         }
+        .choose {
+          margin-left: 2%;
+        }
         .choose > .imge {
-          width: 4%;
+          width: 6%;
           height: 40%;
           margin-top: 1%;
         }
         #select > div > p + p {
-          margin-top: 2.5%;
+          margin-top: 2.8%;
           font-weight: 600;
         }
         #bookingcart {
@@ -171,41 +192,87 @@
         #btn {
           margin-left: 38%;
         }
+        .divII {
+          margin-top: 30%;
+          width: 65%;
+        }
+        .divII > .icon {
+          margin-left: 5%;
+        }
+        .divI {
+          overflow: hidden;
+          margin-right: -6%;
+        }
+        .divIII {
+          overflow: hidden;
+          margin-left: -8%;
+        }
+        #divVI{
+            width: 180%;
+        }
       }
       @media all and (min-width: 200px) and (max-width: 500px) {
         .divI {
-          grid-area: Go;
+          grid-area: lv;
         }
         .divII {
-          grid-area: Cin;
+          grid-area: arw;
         }
         .divIII {
-          grid-area: Cout;
+          grid-area: go;
         }
         .divIV {
-          grid-area: Trvl;
+          grid-area: dep;
+        }
+        .divV {
+          grid-area: retrn;
         }
         #main{
-          width: 90%;
+            width: 90%;
         }
         #select {
-          grid-template-columns: 47% 47%;
-          grid-template-rows: repeat(3, 50px);
+          grid-template-columns: 44% 44%;
+          grid-template-rows: 50px 0px 50px 50px;
           grid-template-areas:
-            "Go Go"
-            "Cin Cout"
-            "Trvl Trvl";
+            "lv lv"
+            "arw arw"
+            "go go"
+            "dep retrn";
         }
         .choose > p {
-          margin: 5px 0px 10px 43px;
+          margin: 4px 0px 10px 40px;
+        }
+        .divII {
+          margin-top: -5%;
+          width: 9%;
+          margin-left: 90%;
+        }
+        .divII > .icon {
+          margin-left: 8%;
+        }
+        .divI {
+          overflow: hidden;
+          margin-left: 3%;
+        }
+        .divIII {
+          overflow: hidden;
+          margin-left: 3%;
+          margin-right: -4%;
+        }
+        .divIV {
+          margin-left: 7%;
+        }
+        .divV {
+          margin-left: 5%;
+          margin-right: -8%;
         }
         .divI > img {
-          width: 4%;
+          width: 5%;
           height: 40%;
         }
         .choose > .imge {
-          width: 4%;
-          height: 40%;
+          width: 13%;
+          height: 42%;
           margin-top: 1%;
         }
         #select > div > p + p {
@@ -222,8 +289,24 @@
         #search {
           padding: 10px 20px 10px 20px;
         }
+        #Leaving {
+          margin-top: 2.5%;
+          margin-left: 7%;
+          font-size: 17px;
+        }
+        #going {
+          margin-top: 2.5%;
+          margin-left: 7%;
+          font-size: 17px;
+        }
+        .divIII > .imge {
+          width: 5%;
+          height: 40%;
+        }
+        #divVI{
+            width: 190%;
+        }
       }
-
     </style>
   </head>
   <body>
@@ -242,50 +325,54 @@
             src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
             alt=""
           />
-          <p id="going">Going to</p>
+          <p id="Leaving">Leaving from</p>
         </div>
         <div class="choose divII">
-          <img
-            class="imge"
-            src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
-            alt="calender"
-          />
-          <p>Check-in</p>
-          <p class="info">28 JUN</p>
+          <svg
+            class="icon"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <svg>
+              <path
+                d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"
+              ></path>
+            </svg>
+          </svg>
         </div>
         <div class="choose divIII">
           <img
             class="imge"
-            src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
-            alt="calender"
+            src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
+            alt="user"
           />
-          <p>Check-out</p>
-          <p class="info">29 JUN</p>
+          <p id="going">Going to</p>
         </div>
         <div class="choose divIV">
           <img
             class="imge"
-            src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-            alt="user"
+            src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
+            alt="calender"
           />
-          <p>Travellers</p>
-          <p class="info">1 room, 1 traveller</p>
+          <p>Departing</p>
+          <p class="info">28 JUN</p>
         </div>
+        <div class="choose divV">
+          <img
+            class="imge"
+            src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
+            alt="calender"
+          />
+          <p>Returning</p>
+          <p class="info">29 JUN</p>
+        </div>
+        <div id="divVI">
+            <input type="checkbox" id="checkboxneed" /><label for="checkboxcar"
+              >I only need accomodation for part of my trip</label
+            >
+          </div>
       </div>
-      <div id="checkit">
-        <div>
-          <input type="checkbox" id="checkboxflight" /><label
-            for="checkboxflight"
-            >Add a flight</label
-          >
-        </div>
-        <div>
-          <input type="checkbox" id="checkboxcar" /><label for="checkboxcar"
-            >Add a car</label
-          >
-        </div>
-      </div>
-      <div id="container"></div>
       <div id="btn">
         <button id="search">Search</button>
       </div>

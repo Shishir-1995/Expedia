@@ -62,10 +62,6 @@
       .choose:hover {
         border: 2px solid #3662db;
       }
-      .divI {
-        /* width: 155%; */
-        font-size: 15px;
-      }
       .choose > img {
         width: 3%;
         margin-right: 2%;
@@ -83,10 +79,6 @@
         width: 8%;
         height: 50%;
         margin-top: 1%;
-      }
-      #things{
-        margin-top: 1%;
-        margin-left: 2.5%;
       }
       button {
         padding: 15px 60px 15px 60px;
@@ -106,6 +98,20 @@
       #select > div > p + p {
         margin-top: 1.5%;
         font-weight: 600;
+      }
+      #inputI{
+        background-image: url('https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85');
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #inputI:hover{
+        border: 2px solid #3662db;
       }
       @media all and (min-width: 501px) and (max-width: 990px) {
         .divI {
@@ -129,10 +135,6 @@
         .choose > p {
           margin: 7px 0px 5px 43px;
         }
-        .divI > img {
-          width: 8%;
-          height: 50%;
-        }
         .choose > .imge {
           width: 15%;
           height: 50%;
@@ -148,10 +150,6 @@
         }
         #btn {
           margin-left: 38%;
-        }
-        #things{
-            margin-left:5%;
-            margin-top: 1.6%;
         }
       }
       @media all and (min-width: 200px) and (max-width: 500px) {
@@ -177,10 +175,6 @@
         .choose > p {
           margin: 4px 0px 10px 40px;
         }
-        .divI > img {
-          width: 6%;
-          height: 40%;
-        }
         .choose > .imge {
           width: 11%;
           height: 42%;
@@ -200,11 +194,6 @@
         #search {
           padding: 10px 20px 10px 20px;
         }
-        #things {
-          margin-top: 1.9%;
-          margin-left: 7%;
-          font-size: 17px;
-        }
       }
     </style>
   </head>
@@ -219,13 +208,7 @@
       </div>
       <hr />
       <div id="select">
-        <div class="choose divI">
-          <img
-            src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
-            alt=""
-          />
-          <p id="things">Things to do in</p>
-        </div>
+        <input type="text" class="divI" id="inputI" placeholder="Things to do in">
         <div class="choose divII">
           <img
             class="imge"

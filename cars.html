@@ -40,11 +40,11 @@
         background-color: rgb(224, 217, 217);
       }
       #select {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 25%);
         grid-template-rows: 50px 50px;
         display: grid;
         margin: auto;
-        width: 96%;
+        width: 90%;
         margin-top: 1%;
         gap: 10px;
         grid-template-areas:
@@ -83,7 +83,7 @@
         border: 2px solid #3662db;
       }
       .choose > img {
-        width: 4%;
+        width: 8%;
         margin-right: 2.5%;
         height: 50%;
         margin-top: 1%;
@@ -94,18 +94,6 @@
         /* border: 1px solid; */
         position: absolute;
         margin: 7px 0px 10px 45px;
-      }
-      #pckup {
-        margin-top: 0.7%;
-        font-size: 17px;
-      }
-      .choose > .imge {
-        width: 8%;
-        height: 50%;
-        margin-top: 1%;
-      }
-      #pckup {
-        margin-top: 0.8%;
       }
       button {
         padding: 15px 60px 15px 60px;
@@ -142,6 +130,23 @@
         color: #5166d1;
         font-weight: 600;
       }
+      #inputI,
+      #inputII {
+        background-image: url("https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+        height: 45px;
+      }
+      #inputI:hover,
+      #inputII:hover {
+        border: 2px solid #3662db;
+      }
       @media all and (min-width: 501px) and (max-width: 990px) {
         .divI {
           grid-area: pckkup;
@@ -165,7 +170,7 @@
           width: 90%;
         }
         #select {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 50%);
           grid-template-rows: repeat(3, 50px);
           grid-template-areas:
             "pckkup drpoff"
@@ -193,11 +198,6 @@
         }
         .choose {
           margin-left: 2%;
-        }
-        .choose > .imge {
-          width: 6%;
-          height: 40%;
-          margin-top: 1%;
         }
         #select > div > p + p {
           margin-top: 2.8%;
@@ -234,7 +234,7 @@
           width: 90%;
         }
         #select {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 50%);
           grid-template-rows: repeat(3, 50px);
           grid-template-areas:
             "pckkup drpoff"
@@ -257,10 +257,6 @@
         .choose > p {
           margin: 4px 0px 10px 40px;
         }
-        .divI > img {
-          width: 5%;
-          height: 40%;
-        }
         .choose > .imge {
           width: 13%;
           height: 42%;
@@ -280,14 +276,8 @@
         #search {
           padding: 10px 20px 10px 20px;
         }
-        #pckup {
-          margin-top: 2.5%;
-          margin-left: 7%;
-          font-size: 17px;
-        }
-        .divIII > .imge {
-          width: 5%;
-          height: 40%;
+        #inputI,#inputII{
+          font-size: 13px;
         }
       }
     </style>
@@ -307,20 +297,8 @@
         <p>Airpot transport</p>
       </div>
       <div id="select">
-        <div class="choose divI">
-          <img
-            src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
-            alt=""
-          />
-          <p id="pckup">Pick-up</p>
-        </div>
-        <div class="choose divII">
-          <img
-            src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
-            alt=""
-          />
-          <p id="pckup">Same as Pick-up</p>
-        </div>
+        <input type="text" class="divI" id="inputI" placeholder="Pick-up">
+        <input type="text" class="divII" id="inputII" placeholder="Same as Pick-up">
         <div class="choose divIII">
           <img
             class="imge"

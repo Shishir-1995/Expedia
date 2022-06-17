@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Packages</title>
+    <title>Flights</title>
     <style>
       #main {
         border: 1px solid grey;
@@ -23,7 +23,7 @@
         justify-content: space-evenly;
       }
       #main > #bookingcart > p:hover {
-        border-bottom: 3px solid #3662db;
+        border-bottom: 2px solid #3662db;
         margin-bottom: 7px;
       }
       #stays > a,
@@ -64,13 +64,11 @@
       }
       .divI {
         /* width: 155%; */
-        font-size: 15px;
         overflow: hidden;
         margin-right: -6%;
       }
       .divIII {
         overflow: hidden;
-        margin-left: -3.5%;
       }
       .choose > img {
         width: 6%;
@@ -84,23 +82,6 @@
         /* border: 1px solid; */
         position: absolute;
         margin: 7px 0px 10px 45px;
-      }
-      #going {
-        margin-top: 0.7%;
-        font-size: 17px;
-      }
-      .choose > .imge {
-        width: 10%;
-        height: 50%;
-        margin-top: 1%;
-      }
-      .choose > .imgee {
-        width: 6%;
-        height: 50%;
-        margin-top: 1%;
-      }
-      #Leaving {
-        margin-top: 0.8%;
       }
       button {
         padding: 15px 60px 15px 60px;
@@ -125,7 +106,6 @@
         margin-top: 8px;
         border-radius: 30px;
         height: 28px;
-        width: 100%;
       }
       .divII > .icon {
         margin-left: 5%;
@@ -139,12 +119,33 @@
         border-radius: 20px;
         overflow: hidden;
       }
-      #checkboxneed{
-        transform: scale(1.5);
-        margin-top: 3%;
+      #inputI,
+      #inputII {
+        background-image: url("https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+        height: 45px;
       }
-      label{
-        margin-left:3%;
+      #inputI:hover,
+      #inputII:hover {
+        border: 2px solid #3662db;
+      }
+      #inputII {
+        margin-left: -4%;
+        margin-top: -0.1%;
+      }
+      #checkboxneed{
+        margin: 0px 8px;
+        transform: scale(1.5);
+      }
+      #divVI{
+        width: 200%;
       }
       @media all and (min-width: 501px) and (max-width: 990px) {
         .divI {
@@ -162,12 +163,14 @@
         .divV {
           grid-area: retrn;
         }
-        #main{
-            width: 90%;
+        #main {
+          width: 90%;
         }
         #select {
-          grid-template-columns: 44% 2% 2% 44%;
+          grid-template-columns: 45% 2% 2% 42%;
           grid-template-rows: repeat(2, 50px);
+          width: 95%;
+          margin: auto;
           grid-template-areas:
             "lv arw arw go"
             "dep dep retrn retrn";
@@ -175,17 +178,11 @@
         .choose > p {
           margin: 7px 0px 5px 43px;
         }
-        .divI > img {
-          width: 6%;
-          height: 40%;
+        .divI {
+          margin-left: 2%;
         }
         .choose {
           margin-left: 2%;
-        }
-        .choose > .imge {
-          width: 6%;
-          height: 40%;
-          margin-top: 1%;
         }
         #select > div > p + p {
           margin-top: 2.8%;
@@ -199,22 +196,21 @@
           margin-left: 38%;
         }
         .divII {
-          margin-top: 30%;
-          width: 65%;
-        }
-        .divII > .icon {
-          margin-left: 5%;
+          width: 80%;
         }
         .divI {
           overflow: hidden;
-          margin-right: -6%;
+          border: 0;
         }
         .divIII {
-          overflow: hidden;
+          border: 0;
+        }
+        #inputII{
           margin-left: -8%;
+          overflow: hidden;
         }
         #divVI{
-            width: 180%;
+          width: 190%;
         }
       }
       @media all and (min-width: 200px) and (max-width: 500px) {
@@ -233,8 +229,8 @@
         .divV {
           grid-area: retrn;
         }
-        #main{
-            width: 90%;
+        #main {
+          width: 90%;
         }
         #select {
           grid-template-columns: 44% 44%;
@@ -250,7 +246,7 @@
         }
         .divII {
           margin-top: -5%;
-          width: 9%;
+          width: 7.5%;
           margin-left: 90%;
         }
         .divII > .icon {
@@ -258,26 +254,19 @@
         }
         .divI {
           overflow: hidden;
-          margin-left: 3%;
         }
         .divIII {
           overflow: hidden;
-          margin-left: 3%;
-          margin-right: -4%;
         }
         .divIV {
-          margin-left: 7%;
+          margin-left: 0.5%;
         }
         .divV {
-          margin-left: 5%;
-          margin-right: -8%;
-        }
-        .divI > img {
-          width: 5%;
-          height: 40%;
+          margin-left: 3%;
+          margin-right: -12%;
         }
         .choose > .imge {
-          width: 13%;
+          width: 10%;
           height: 42%;
           margin-top: 1%;
         }
@@ -295,22 +284,12 @@
         #search {
           padding: 10px 20px 10px 20px;
         }
-        #Leaving {
-          margin-top: 2.5%;
-          margin-left: 7%;
-          font-size: 17px;
-        }
-        #going {
-          margin-top: 2.5%;
-          margin-left: 7%;
-          font-size: 17px;
-        }
-        .divIII > .imge {
-          width: 5%;
-          height: 40%;
+        #inputII{
+          margin-left:0.2%;
+          margin-right: -6%;
         }
         #divVI{
-            width: 190%;
+          width: 200%;
         }
       }
     </style>
@@ -326,13 +305,13 @@
       </div>
       <hr />
       <div id="select">
-        <div class="choose divI">
-          <img
-            src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
-            alt=""
-          />
-          <p id="Leaving">Leaving from</p>
-        </div>
+        <input
+          type="text"
+          class="divI"
+          id="inputI"
+          placeholder="Leaving from"
+        />
+
         <div class="choose divII">
           <svg
             class="icon"
@@ -347,14 +326,8 @@
             </svg>
           </svg>
         </div>
-        <div class="choose divIII">
-          <img
-            class="imgee"
-            src="https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85"
-            alt="user"
-          />
-          <p id="going">Going to</p>
-        </div>
+
+        <input type="text" class="divIII" id="inputII" placeholder="Going to" />
         <div class="choose divIV">
           <img
             class="imge"
@@ -374,7 +347,7 @@
           <p class="info">29 JUN</p>
         </div>
         <div id="divVI">
-            <input type="checkbox" id="checkboxneed" /><label for="checkboxcar"
+            <input type="checkbox" id="checkboxneed" /><label for="checkboxneed"
               >I only need accomodation for part of my trip</label
             >
           </div>

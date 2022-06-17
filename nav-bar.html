@@ -140,7 +140,7 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#" id="hov">Trips</a>
               </li>
-              <li class="nav-item ">
+              <li class="nav-item " id="nav-last-item">
                 <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Sign in
                 </a>
@@ -160,4 +160,23 @@
       </nav>
     
 </body>
+<script>
+  let auth = JSON.parse(localStorage.getItem("login"))
+  let logout;
+  if(auth!=null){
+    logout = document.querySelector("#nav-last-item")
+    logout.textContent = "Logout";
+    logout.style.color = "blue";
+    logout.style.fontWeight = "700";
+    logout.style.fontSize = "20px"
+
+  }
+  logout.addEventListener("click",lgot);
+
+  function lgot(){
+    window.location.href = "../Expedia/login/expedia_login.html"
+    logout.textContent = "Sign in"
+    localStorage.removeItem("login")
+  }
+</script>
 </html>

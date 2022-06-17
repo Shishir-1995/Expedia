@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -14,6 +14,7 @@
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
       }
 
       img {
@@ -53,10 +54,11 @@
       h1 {
         font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, "Helvetica Neue", Arial, sans-serif;
-        font-weight: 645;
+        font-weight: 500;
         font-size: 32px;
         padding-top: 14px;
         padding-bottom: 7px;
+        line-height: 36px;
       }
 
       .checkbox {
@@ -159,15 +161,16 @@
       <form id="form">
         <h1>Create an account</h1>
         <div id="head">
-          <input id="email" type="text" placeholder="Email address" />
-          <input type="text" id="name" placeholder="First name" />
-          <input type="text" id="surname" placeholder="Surname" />
+          <input type="text" id="email" placeholder="Email address" required />
+          <input type="text" id="name" placeholder="First name" required />
+          <input type="text" id="surname" placeholder="Surname" required />
           <div class="pwd">
             <input
               type="password"
               placeholder="Password"
               name="password"
               id="password"
+              required
             />
             <span class="p-viewer">
               <i class="fa fa-eye" aria-hidden="true" id="togglePassword"></i>
@@ -226,6 +229,7 @@
       </form>
     </div>
   </body>
+
   <script>
     const togglePassword = document.querySelector("#togglePassword");
     const password = document.querySelector("#password");
@@ -238,5 +242,20 @@
       // toggle the eye slash icon
       this.classList.toggle("fa-eye-slash");
     });
+  </script>
+
+  <script>
+    let arr = JSON.parse(localStorage.getItem("signup")) || [];
+    document.querySelector("button").addEventListener("click", myFunction);
+    function myFunction() {
+      let obj = {
+        email: document.getElementById("email").value,
+        name: document.getElementById("name").value,
+        surname: document.getElementById("surname").value,
+        password: document.getElementById("password").value,
+      };
+      arr.push(obj);
+      localStorage.setItem("userData", JSON.stringify(arr));
+    }
   </script>
 </html>

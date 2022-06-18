@@ -87,6 +87,7 @@ border-radius: 10px;
 
 
 .box1 {
+    
 background-image: url(https://a.travel-assets.com/travel-assets-manager/ux-887/Global-HP-Hero-928x398.jpg);
 background-color: rgba(0, 0, 0, 0.493);
 background-blend-mode: multiply;
@@ -95,8 +96,8 @@ margin: auto;
 background-size: cover;
 height: fit-content;
 border-radius: 10px;
-
 margin-bottom: 20px;
+margin-top: 80px;
 }
 
 .box1-content {

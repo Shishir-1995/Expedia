@@ -10,7 +10,84 @@
     <link href="//db.onlinewebfonts.com/c/229a57bbeef591e04a1fdfe347c90864?family=Centra+No2" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="../Expedia/style.css">
     <title>Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp; Airfares</title>
-   
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container-box {
+    width: 90vw;
+    min-height: 10em;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    top: 4em;
+    transform: translate(-50%);
+}
+.navigation {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navigation > li {
+    margin: 1em 1em;
+    padding-bottom: .12em;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+.navigation > li:hover {
+    border-bottom: 2px solid rgb(0, 110, 255);
+    color: rgb(0, 110, 255);
+}
+.nav-content {
+    padding: 1em;
+}
+.search {
+    padding: .5em 1em;
+    margin: 1em 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    background: rgb(0, 110, 255);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+.input-area {
+    height: 2.5em;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: .2em .5em;
+    padding: 0 1em;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.sub-nav {
+    margin: 0 .5em;
+    padding: .5em 1em;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: gray;
+    cursor: pointer;
+}
+.sub-nav:hover {
+    color: rgb(0, 110, 255);
+    background: rgb(183, 214, 255);
+}
+.div1 {
+    display: flex;
+    justify-content: space-between;
+}
+.div2 {
+    margin-top: 1em;
+    display: block;
+}
+   </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
@@ -70,6 +147,18 @@
         </div>
       </nav>
       <header>
+        <div class="container-box">
+          <ul class="navigation">
+              <li class="stays">Stays</li>
+              <li class="flights">Flights</li>
+              <li class="cars">Cars</li>
+              <li class="packages">Packages</li>
+              <li class="things">Things to do</li>
+          </ul>
+          <hr>
+          <div class="nav-content"></div>
+          <button class="search">Search</button>
+      </div>
 
       </header>
 
@@ -79,7 +168,7 @@
             <div class="box1-content">
               <h1>Save instantly with Expedia Rewards</h1>
               <p>You can enjoy access to perks like Member Prices, saving you 10% or more on select hotels. Terms may apply</p>
-              <button><a href="https://www.expedia.co.in/member-price?rfrr=HeroBannerMOD14Jan" style="color: white;text-decoration:none;">See Member Prices</a> </button>
+              <button>See Member Prices</button>
             </div>
           </div>
           <div class="box2">
@@ -159,7 +248,7 @@
       </footer>
     
 </body>
-<script>
+<script src="script.js">
   let auth = JSON.parse(localStorage.getItem("login"))
   let logout;
   if(auth!=null){

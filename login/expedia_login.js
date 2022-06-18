@@ -13,7 +13,7 @@ form.addEventListener("submit",function(event){
     if (check_credential(userObj.user_email,userObj.user_password)==true){
         localStorage.setItem("login",JSON.stringify(userObj));
         alert("login successful !")
-        window.location.href = "../nav-bar.html"
+        window.location.href = "../index.html"
     }else {
         alert("invalid email id or password !")
     }

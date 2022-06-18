@@ -32,10 +32,12 @@
             width: 90%;
             display: grid;
             grid-template-columns: repeat(5,1fr);
-            grid-template-rows: repeat(1,250px);
+            /* grid-template-rows: repeat(1,250px); */
             justify-content: center;
             margin: auto;
             margin-top: 50px;
+            grid-template-areas: 
+            "b1 b2 b3 b4 b5";
         }
         #container>div{
             height: 100%;
@@ -56,16 +58,24 @@
             text-decoration: none;
            
         }
-        @media all and (min-width:400px) and (max-width:720px){
+        @media all and (max-width:720px){
             #container{
-            display: grid;
-            grid-template-columns: repeat(2,auto);
-            grid-template-rows: repeat(3,auto);
+            
+            grid-template-columns: repeat(2,1fr);
+            /* grid-template-rows: repeat(3,auto); */
             grid-template-areas: 
             "b1 b1"
             "b2 b3"
             "b4 b5";
            }
+        }
+        @media all and (min-width:720px) and (max-width:1000px){
+            #container{
+                grid-template-columns: repeat(4,1fr);
+                grid-template-areas: 
+            "b1 b1 b1 b1"
+            "b2 b3 b4 b5"
+            }
         }
         #spe{
             margin-top: 25px;
@@ -83,19 +93,19 @@
             margin-top: 35px;
             width: 90%;
         }
-        #container>div:nth-child(1){
+        #b1{
             grid-area: b1;
         }
-        #container>div:nth-child(2){
+        #b2{
             grid-area: b2;
         }
-        #container>div:nth-child(3){
+       #b3{
             grid-area: b3;
         }
-        #container>div:nth-child(4){
+        #b4{
             grid-area: b4;
         }
-        #container>div:nth-child(5){
+        #b5{
             grid-area: b5;
         }
         #last>img{
@@ -114,10 +124,10 @@
         </div>
         <div id="b2">
             <h3>Company</h3>
-           <p><a href="https://www.expedia.co.in/lp/b/about">About us</a></p> 
+           <p><a href="https://www.expediagroup.com/home/default.aspx">About us</a></p> 
             <p><a href="https://lifeatexpediagroup.com/">Jobs</a></p>
-           <p><a href="https://apps.expediapartnercentral.com/en_GB/list?utm_medium=referral&utm_source=wwwexpediacoin-en_GB&utm_campaign=SEO.B.google.com&utm_contentewd=footer-btn&siteId=27&tpid=27&eapid=0&langId=2057&utm_term=SEO.B.google.com&lasttouchMktgcode=SEO.B.google.com">List your property</a></p> 
-            <P><a href="https://www.expediagroup.com/partnerships/">Partnerships</a></P>
+           <p><a href="https://apps.expediapartnercentral.com/en_US/list?utm_medium=referral&utm_source=wwwexpediacom-en_US&utm_campaign=Brand.DTI&utm_contentewd=footer-btn&siteId=1&tpid=1&eapid=0&langId=1033&utm_term=Brand.DTI&lasttouchMktgcode=Brand.DTI">List your property</a></p> 
+            <P><a href="https://www.expediagroup.com/partnerships/">Partnership</a></P>
         </div>
         <div id="b3">
             <h3>Explore</h3>
@@ -154,3 +164,16 @@
     </div>
     </body>
 </html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

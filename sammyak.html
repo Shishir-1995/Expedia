@@ -59,8 +59,8 @@
         @media all and (min-width:400px) and (max-width:720px){
             #container{
             display: grid;
-            grid-template-columns: repeat(2,1fr);
-            /* grid-template-rows: repeat(3,auto); */
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: repeat(3,auto);
             grid-template-areas: 
             "b1 b1"
             "b2 b3"
@@ -83,19 +83,19 @@
             margin-top: 35px;
             width: 90%;
         }
-        #b1{
+        #container>div:nth-child(1){
             grid-area: b1;
         }
-        #b2{
+        #container>div:nth-child(2){
             grid-area: b2;
         }
-       #b3{
+        #container>div:nth-child(3){
             grid-area: b3;
         }
-        #b4{
+        #container>div:nth-child(4){
             grid-area: b4;
         }
-        #b5{
+        #container>div:nth-child(5){
             grid-area: b5;
         }
         #last>img{

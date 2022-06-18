@@ -82,18 +82,6 @@
       .choose:hover {
         border: 2px solid #3662db;
       }
-      .choose > .imge {
-        width: 8%;
-        height: 50%;
-        margin-top: 5%;
-        margin-left: 3%;
-        /* border: 1px solid; */
-      }
-      .choose > p {
-        /* border: 1px solid; */
-        position: absolute;
-        margin: 7px 0px 10px 45px;
-      }
       button {
         padding: 15px 60px 15px 60px;
         font-weight: bold;
@@ -109,11 +97,7 @@
         margin-top: 10px;
         margin-bottom: 20px;
       }
-      #select > div > p + p {
-        margin-top: 1.8%;
-        font-weight: 600;
-      }
-      #inputI {
+      #input-things {
         background-image: url("https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85");
         background-size: 24px;
         background-position: left;
@@ -124,17 +108,45 @@
         border: 1px solid grey;
         font-size: 17px;
       }
-      #inputI:hover {
+      #input-things:hover {
+        border: 2px solid #3662db;
+      }
+      #input-from {
+        background-image: url("https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #input-from:hover {
+        border: 2px solid #3662db;
+      }
+      #input-to {
+        background-image: url("https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #input-to:hover {
         border: 2px solid #3662db;
       }
       @media all and (min-width: 720px) and (max-width: 1000px) {
-        .divI {
+        .thngs {
           grid-area: th;
         }
-        .divII {
+        .from {
           grid-area: fr;
         }
-        .divIII {
+        .to {
           grid-area: to;
         }
         #main {
@@ -145,18 +157,6 @@
           grid-template-rows: 50px;
           grid-template-areas: "th th fr to";
         }
-        .choose > p {
-          margin: 7px 0px 5px 43px;
-        }
-        .choose > .imge {
-          width: 13%;
-          height: 50%;
-          margin-top: 8%;
-        }
-        #select > div > p + p {
-          margin-top: 2.8%;
-          font-weight: 600;
-        }
         #bookingcart {
           width: 100%;
           font-size: 12px;
@@ -166,13 +166,13 @@
         }
       }
       @media all and (max-width: 719px) {
-        .divI {
+        .thngs {
           grid-area: th;
         }
-        .divII {
+        .from{
           grid-area: fr;
         }
-        .divIII {
+        .to {
           grid-area: to;
         }
         #main {
@@ -184,18 +184,6 @@
           grid-template-areas:
             "th th"
             "fr to";
-        }
-        .choose > p {
-          margin: 4px 0px 10px 40px;
-        }
-        .choose > .imge {
-          width: 8%;
-          height: 42%;
-          margin-top: 6%;
-        }
-        #select > div > p + p {
-          margin-top: 4%;
-          font-weight: 600;
         }
         #bookingcart {
           width: 100%;
@@ -385,28 +373,24 @@
         <div id="select">
           <input
             type="text"
-            class="divI"
-            id="inputI"
+            class="choose thngs"
+            id="input-things"
             placeholder="Things to do in"
           />
-          <div class="choose divII">
-            <img
-              class="imge"
-              src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
-              alt="calender"
-            />
-            <p>From</p>
-            <p class="info">1 JUL</p>
-          </div>
-          <div class="choose divIII">
-            <img
-              class="imge"
-              src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
-              alt="calender"
-            />
-            <p>To</p>
-            <p class="info">2 JUL</p>
-          </div>
+          <input
+            type="text"
+            class="choose from"
+            id="input-from"
+            placeholder="From"
+            onfocus="(this.type='date')"
+          />
+          <input
+            type="text"
+            class="choose to"
+            id="input-to"
+            placeholder="To"
+            onfocus="(this.type='date')"
+          />
         </div>
         <div id="btn">
           <button id="search">Search</button>

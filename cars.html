@@ -71,22 +71,22 @@
           "pckkup pckkup drpoff drpoff"
           "pckd drpd pckt drpt";
       }
-      .divI {
+      .pickI {
         grid-area: pckkup;
       }
-      .divII {
+      .pickII {
         grid-area: drpoff;
       }
-      .divIII {
+      .dateI {
         grid-area: pckd;
       }
-      .divIV {
+      .dateII {
         grid-area: drpd;
       }
-      .divV {
+      .timeI {
         grid-area: pckt;
       }
-      .divVI {
+      .timeII {
         grid-area: drpt;
       }
       .choose {
@@ -102,19 +102,6 @@
       .choose:hover {
         border: 2px solid #3662db;
       }
-      .choose > .imge {
-        width: 8%;
-        margin-right: 2%;
-        height: 50%;
-        margin-top: 3.5%;
-        margin-left: 3%;
-        /* border: 1px solid; */
-      }
-      .choose > p {
-        /* border: 1px solid; */
-        position: absolute;
-        margin: 7px 0px 10px 45px;
-      }
       button {
         padding: 15px 60px 15px 60px;
         font-weight: bold;
@@ -129,10 +116,6 @@
         margin: auto;
         margin-top: 10px;
         margin-bottom: 20px;
-      }
-      #select > div > p + p {
-        margin-top: 1.7%;
-        font-weight: 600;
       }
       #transport {
         display: flex;
@@ -150,8 +133,8 @@
         color: #5166d1;
         font-weight: 600;
       }
-      #inputI,
-      #inputII {
+      #input-pick-up,
+      #input-same-pick-up {
         background-image: url("https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85");
         background-size: 24px;
         background-position: left;
@@ -163,27 +146,83 @@
         font-size: 17px;
         height: 45px;
       }
-      #inputI:hover,
-      #inputII:hover {
+      #input-pick-up:hover,
+      #input-same-pick-up:hover {
+        border: 2px solid #3662db;
+      }
+      #input-pick-date {
+        background-image: url("https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #input-pick-date:hover {
+        border: 2px solid #3662db;
+      }
+      #input-drop-date {
+        background-image: url("https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #input-drop-date:hover {
+        border: 2px solid #3662db;
+      }
+      #input-pick-time {
+        background-image: url("https://icons-for-free.com/iconfiles/png/512/clock+event+time+watch+icon-1320196391333457888.png");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #input-pick-time:hover {
+        border: 2px solid #3662db;
+      }
+      #input-drop-time {
+        background-image: url("https://icons-for-free.com/iconfiles/png/512/clock+event+time+watch+icon-1320196391333457888.png");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #input-drop-time:hover {
         border: 2px solid #3662db;
       }
       @media all and (min-width: 720px) and (max-width: 1000px) {
-        .divI {
+        .pickI {
           grid-area: pckkup;
         }
-        .divII {
+        .pickII {
           grid-area: drpoff;
         }
-        .divIII {
+        .dateI {
           grid-area: pckd;
         }
-        .divIV {
+        .dateII {
           grid-area: drpd;
         }
-        .divV {
+        .timeI{
           grid-area: pckt;
         }
-        .divVI {
+        .timeII {
           grid-area: drpt;
         }
         #main {
@@ -197,9 +236,6 @@
             "pckd drpd"
             "pckt drpt";
         }
-        .choose > p {
-          margin: 7px 0px 5px 43px;
-        }
         #transport {
           width: 60%;
           margin-left: 4%;
@@ -212,16 +248,8 @@
           text-align: center;
           font-size: 14px;
         }
-        .choose > .imge {
-          width: 6%;
-          height: 40%;
-        }
         .choose {
           margin-left: 2%;
-        }
-        #select > div > p + p {
-          margin-top: 2.4%;
-          font-weight: 600;
         }
         #bookingcart {
           width: 100%;
@@ -232,22 +260,22 @@
         }
       }
       @media all and (max-width: 719px) {
-        .divI {
+        .pickI {
           grid-area: pckkup;
         }
-        .divII {
+        .pickII {
           grid-area: drpoff;
         }
-        .divIII {
+        .dateI {
           grid-area: pckd;
         }
-        .divIV {
+        .dateII {
           grid-area: drpd;
         }
-        .divV {
+        .timeI{
           grid-area: pckt;
         }
-        .divVI {
+        .timeII {
           grid-area: drpt;
         }
         #main {
@@ -273,19 +301,6 @@
           text-align: center;
           font-size: 13px;
         }
-
-        .choose > p {
-          margin: 4px 0px 10px 40px;
-        }
-        .choose > .imge {
-          width: 8%;
-          height: 42%;
-          margin-top: 5%;
-        }
-        #select > div > p + p {
-          margin-top: 4%;
-          font-weight: 600;
-        }
         #bookingcart {
           width: 100%;
           font-size: 10px;
@@ -296,8 +311,8 @@
         #search {
           padding: 10px 20px 10px 20px;
         }
-        #inputI,
-        #inputII {
+        #input-pick-up,
+        #input-same-pick-up {
           font-size: 13px;
         }
       }
@@ -480,49 +495,41 @@
           <p>Airpot transport</p>
         </div>
         <div id="select">
-          <input type="text" class="divI" id="inputI" placeholder="Pick-up" />
+          <input type="text" class="choose pickI" id="input-pick-up" placeholder="Pick-up" />
           <input
             type="text"
-            class="divII"
-            id="inputII"
+            class="choose pickII"
+            id="input-same-pick-up"
             placeholder="Same as Pick-up"
           />
-          <div class="choose divIII">
-            <img
-              class="imge"
-              src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
-              alt=""
-            />
-            <p>Pick-up date</p>
-            <p class="info">1 JUL</p>
-          </div>
-          <div class="choose divIV">
-            <img
-              class="imge"
-              src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
-              alt="calender"
-            />
-            <p>Drop-off date</p>
-            <p class="info">2 JUL</p>
-          </div>
-          <div class="choose divV">
-            <img
-              class="imge"
-              src="https://cdn-icons-png.flaticon.com/512/59/59252.png"
-              alt="time"
-            />
-            <p>Pick-up time</p>
-            <p class="info">10:30</p>
-          </div>
-          <div class="choose divVI">
-            <img
-              class="imge"
-              src="https://cdn-icons-png.flaticon.com/512/59/59252.png"
-              alt="time"
-            />
-            <p>Drop-off time</p>
-            <p class="info">10:30</p>
-          </div>
+          <input
+            type="text"
+            class="choose dateI"
+            id="input-pick-date"
+            placeholder="Pick-up date"
+            onfocus="(this.type='date')"
+          />
+          <input
+            type="text"
+            class="choose dateII"
+            id="input-drop-date"
+            placeholder="Drop-off date"
+            onfocus="(this.type='date')"
+          />
+          <input
+            type="text"
+            class="choose timeI"
+            id="input-pick-time"
+            placeholder="Pick-up time"
+            onfocus="(this.type='time')"
+          />
+          <input
+            type="text"
+            class="choose timeII"
+            id="input-drop-time"
+            placeholder="Drop-off time"
+            onfocus="(this.type='time')"
+          />
         </div>
         <div id="btn">
           <button id="search">Search</button>

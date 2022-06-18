@@ -315,3 +315,24 @@ function Things() {
     el3.className = 'input-area';
     contents.appendChild(el3);
 }
+
+let dp1 = document.querySelector("#drop1").addEventListener("click", drop1)
+function drop1(){
+    Stays();
+}
+let dp2 = document.querySelector("#drop2").addEventListener("click", drop2)
+function drop2(){
+    Flights()
+}
+let dp3 = document.querySelector("#drop3").addEventListener("click", drop3)
+function drop3(){
+    Cars()
+}
+let dp4 = document.querySelector("#drop4").addEventListener("click", drop4)
+function drop4(){
+    Packages()
+}
+let dp5 = document.querySelector("#drop5").addEventListener("click", drop5)
+function drop5(){
+    Things()
+}

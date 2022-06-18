@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="//db.onlinewebfonts.com/c/229a57bbeef591e04a1fdfe347c90864?family=Centra+No2"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../Expedia/style.css" />
+    <title>
+      Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp; Airfares
+    </title>
+    <style>
+      #main {
+        border: 1px solid grey;
+        width: 90%;
+        margin: auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 10px;
+      }
+      #bookingcart {
+        display: flex;
+        width: 40%;
+        margin: auto;
+        border: 0;
+        margin-top: 1%;
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-synthesis: none;
+        justify-content: space-evenly;
+      }
+      #main > #bookingcart > p:hover {
+        border-bottom: 2px solid #3662db;
+        margin-bottom: 7px;
+      }
+      #stays > a,
+      #flght > a,
+      #thngs > a,
+      #pckgs > a,
+      #car > a {
+        text-decoration: none;
+        color: black;
+      }
+      hr {
+        margin-top: 3px;
+        width: 95%;
+        margin-left: 2.5%;
+        background-color: rgb(224, 217, 217);
+      }
+      #select {
+        grid-template-columns: 31% 2% 31% 15% 15%;
+        grid-template-rows: 50px;
+        display: grid;
+        margin: auto;
+        width: auto;
+        margin-top: 1%;
+        margin-left: 3.5%;
+        gap: 10px;
+      }
+      .choose {
+        border: 1px solid grey;
+        display: flex;
+        color: #141d38;
+        font-size: 13px;
+        border-radius: 10px;
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-synthesis: none;
+      }
+      .choose:hover {
+        border: 2px solid #3662db;
+      }
+      .divI {
+        /* width: 155%; */
+        overflow: hidden;
+        margin-right: -6%;
+      }
+      .divIII {
+        overflow: hidden;
+      }
+      .choose > .imge {
+        width: 10%;
+        margin-right: 2.5%;
+        height: 50%;
+        margin-left: 6%;
+        margin-top: 6%;
+      }
+      .choose > p {
+        /* border: 1px solid; */
+        position: absolute;
+        margin: 7px 0px 10px 45px;
+      }
+      button {
+        padding: 15px 60px 15px 60px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 0;
+        background-color: #3662db;
+        color: white;
+        margin-top: 8%;
+      }
+      #btn {
+        width: 15.5%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      #select > div > p + p {
+        margin-top: 1.8%;
+        font-weight: 600;
+      }
+      .divII {
+        margin-top: 8px;
+        border-radius: 30px;
+        height: 28px;
+      }
+      .divII > .icon {
+        margin-left: 5%;
+        margin-top: 7%;
+      }
+      .icon {
+        height: 1.5rem;
+        min-width: 1.5rem;
+        width: 1.5rem;
+        transform: rotate(90deg);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      #inputI,
+      #inputII {
+        background-image: url("https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85");
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+        height: 45px;
+      }
+      #inputI:hover,
+      #inputII:hover {
+        border: 2px solid #3662db;
+      }
+      #inputII {
+        margin-left: -4%;
+        margin-top: -0.1%;
+      }
+      #checkboxneed {
+        margin: 0px 8px;
+        transform: scale(1.5);
+      }
+      #divVI {
+        width: 200%;
+      }
+      @media all and (min-width: 720px) and (max-width: 1000px) {
+        .divI {
+          grid-area: lv;
+        }
+        .divII {
+          grid-area: arw;
+        }
+        .divIII {
+          grid-area: go;
+        }
+        .divIV {
+          grid-area: dep;
+        }
+        .divV {
+          grid-area: retrn;
+        }
+        #main {
+          width: 90%;
+        }
+        #select {
+          grid-template-columns: 45% 2% 2% 42%;
+          grid-template-rows: repeat(2, 50px);
+          width: 95%;
+          margin: auto;
+          grid-template-areas:
+            "lv arw arw go"
+            "dep dep retrn retrn";
+        }
+        .choose > p {
+          margin: 7px 0px 5px 43px;
+        }
+        .divI {
+          margin-left: 2%;
+        }
+        .choose {
+          margin-left: 2%;
+        }
+        #select > div > p + p {
+          margin-top: 2.8%;
+          font-weight: 600;
+        }
+        #bookingcart {
+          width: 100%;
+          font-size: 12px;
+        }
+        #btn {
+          margin-left: 38%;
+        }
+        .divII {
+          width: 80%;
+        }
+        .divI {
+          overflow: hidden;
+          border: 0;
+        }
+        .choose > .imge {
+          width: 6%;
+          margin-right: 2.5%;
+          height: 50%;
+          margin-left: 3%;
+          margin-top: 3%;
+        }
+        .divIII {
+          border: 0;
+        }
+        #inputII {
+          margin-left: -8%;
+          overflow: hidden;
+        }
+        #divVI {
+          width: 190%;
+        }
+      }
+
+      @media all and (max-width: 719px) {
+        .divI {
+          grid-area: lv;
+        }
+        .divII {
+          grid-area: arw;
+        }
+        .divIII {
+          grid-area: go;
+        }
+        .divIV {
+          grid-area: dep;
+        }
+        .divV {
+          grid-area: retrn;
+        }
+        #main {
+          width: 90%;
+        }
+        #select {
+          grid-template-columns: 44% 44%;
+          grid-template-rows: 50px 0px 50px 50px;
+          grid-template-areas:
+            "lv lv"
+            "arw arw"
+            "go go"
+            "dep retrn";
+        }
+        .choose > p {
+          margin: 4px 0px 10px 40px;
+        }
+        .divII {
+          margin-top: -5%;
+          width: 7.5%;
+          margin-left: 90%;
+        }
+        .divII > .icon {
+          margin-left: 8%;
+        }
+        .divI {
+          overflow: hidden;
+        }
+        .divIII {
+          overflow: hidden;
+        }
+        .divIV {
+          margin-left: 0.5%;
+        }
+        .divV {
+          margin-left: 3%;
+          margin-right: -12%;
+        }
+        .choose > .imge {
+          width: 8%;
+          height: 42%;
+          margin-top: 6%;
+        }
+        #select > div > p + p {
+          margin-top: 3.8%;
+          font-weight: 600;
+        }
+        #bookingcart {
+          width: 100%;
+          font-size: 10px;
+        }
+        #btn {
+          margin-left: 38%;
+        }
+        #search {
+          padding: 10px 20px 10px 20px;
+        }
+        #inputII {
+          margin-left: 0.2%;
+          margin-right: -6%;
+          margin-top: -1.5%;
+        }
+        #divVI {
+          width: 200%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2"
+            alt="Expedia Logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More travels
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><svg>
+                      <path
+                        d="M21.61 21.41l-.47-1.1a.49.49 0 00-.16-.2.4.4 0 00-.23-.06h-.84V7.4a.4.4 0 00-.12-.28.38.38 0 00-.29-.13h-3.75V2.41a.4.4 0 00-.12-.28.38.38 0 00-.29-.13H4.5a.38.38 0 00-.3.13.4.4 0 00-.11.28v17.64h-.84a.4.4 0 00-.23.07.49.49 0 00-.16.18l-.47 1.11a.44.44 0 00-.03.2c0 .08.03.14.07.2a.38.38 0 00.33.2h18.48a.38.38 0 00.33-.2.36.36 0 00.07-.2c0-.06 0-.13-.03-.2zM9.09 17h-2.5v-2.5h2.5V17zm0-5h-2.5V9.5h2.5V12zm0-5h-2.5V4.5h2.5V7zm4.16 12.77h-2.5V14.5h2.5v5.27zm0-7.77h-2.5V9.5h2.5V12zm0-5h-2.5V4.5h2.5V7zm4.16 10h-2.5v-2.5h2.5V17zm0-5h-2.5V9.5h2.5V12z"
+                      ></path></svg
+                    >Stays</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><svg>
+                      <path
+                        d="M3.64 14.26l2.86.95 4.02-4.02-8-4.59 1.16-1.16c.1-.1.26-.14.41-.1l9.3 2.98c1.58-1.58 3.15-3.2 4.77-4.75.31-.33.7-.58 1.16-.73.45-.16.87-.27 1.25-.34.55-.05.98.4.93.93-.07.38-.18.8-.34 1.25-.15.46-.4.85-.73 1.16l-4.75 4.78 2.97 9.29c.05.15 0 .29-.1.41l-1.17 1.16-4.57-8.02L8.8 17.5l.95 2.84L8.6 21.5l-2.48-3.62L2.5 15.4l1.14-1.14z"
+                      ></path></svg
+                    >Flights</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><svg>
+                      <path
+                        d="M21.86 11.16L20.2 9.62l-1.66-5.53a.39.39 0 00-.14-.21.4.4 0 00-.25-.08H5.85a.4.4 0 00-.25.08.4.4 0 00-.14.2l-1.8 5.54-1.54 1.54a.38.38 0 00-.1.14.44.44 0 00-.02.16v4.94l.03.15c.02.06.05.1.09.14l.72.7v2.37c0 .11.04.22.12.3.08.08.17.13.29.13h3.34c.12 0 .21-.05.3-.13a.43.43 0 00.11-.3v-2.37h10v2.37c0 .11.04.22.12.3.08.08.17.13.29.13h3.34c.12 0 .21-.05.3-.13a.43.43 0 00.11-.3v-2.37l.72-.7a.38.38 0 00.1-.14l.02-.15v-4.92a.39.39 0 00-.04-.18.52.52 0 00-.1-.14zM6.8 5.46h10.4l1.25 4.16H5.54l1.25-4.16zm-.9 9.16a1.6 1.6 0 01-1.18-.49 1.6 1.6 0 01-.48-1.17c0-.46.16-.85.48-1.17a1.6 1.6 0 011.18-.49c.45 0 .84.16 1.17.49.32.32.49.71.49 1.17 0 .46-.17.85-.5 1.17a1.6 1.6 0 01-1.16.49zm12.22 0a1.6 1.6 0 01-1.17-.49 1.6 1.6 0 01-.49-1.17c0-.46.17-.85.5-1.17a1.6 1.6 0 011.16-.49c.46 0 .85.16 1.18.49.32.32.48.71.48 1.17 0 .46-.16.85-.48 1.17a1.6 1.6 0 01-1.18.49z"
+                      ></path></svg
+                    >Cars</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><svg>
+                      <path
+                        d="M21.59 11.59h-2.36V8.66c0-.23-.2-.41-.43-.41h-5.82a.42.42 0 00-.43.41v2.93H10.2a.42.42 0 00-.43.41v8.34c0 .23.21.41.43.41h11.4c.21 0 .41-.2.41-.41V12c0-.23-.2-.41-.41-.41zm-7.36-1.68h3.32v1.68h-3.32V9.91zm3.79 9.06l-1.2-1.17 2.37-2.36 1.17 1.17-2.34 2.36zM10.89 4.91V3.66a.4.4 0 00-.41-.41H4.64a.4.4 0 00-.41.41v2.93H2.4A.4.4 0 002 7v13.34c0 .2.18.41.41.41h5.7V10.34c0-.23.18-.43.41-.43h2.37v-5zM9.23 6.59H5.89V4.91h3.34v1.68z"
+                      ></path></svg
+                    >Packages</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><svg>
+                      <path
+                        d="M22 10.18V6H2v4.18c.9 0 1.66.75 1.66 1.66 0 .9-.76 1.66-1.66 1.66v4.18h20V13.5c-.9 0-1.66-.76-1.66-1.66 0-.9.76-1.66 1.66-1.66zm-4.16 4.57c0 .23-.2.43-.43.43H6.59a.43.43 0 01-.43-.43V8.93c0-.23.2-.43.43-.43h10.82c.23 0 .43.2.43.43v5.82zm-10-4.57h8.32v3.32H7.84v-3.32z"
+                      ></path></svg
+                    >Holiday activities</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Deals</a></li>
+                <li><a class="dropdown-item" href="#">Group & meetings</a></li>
+                <li><a class="dropdown-item" href="#">Mobile</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav" id="side-nav">
+            <li class="nav-item">
+              <div class="lang">
+                <a class="nav-link active" aria-current="page" href="#" id="hov"
+                  ><svg
+                    class="uitk-icon all-r-padding-two uitk-icon-small"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <svg>
+                      <path
+                        d="M11.99 2A10 10 0 1012 21.99 10 10 0 0011.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82A14.09 14.09 0 0112 4.04zM4.26 14a8.17 8.17 0 010-4h3.38a16.45 16.45 0 000 4H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.99 7.99 0 015.08 16zm2.95-8H5.08a7.99 7.99 0 014.33-3.56A15.65 15.65 0 008.03 8zM12 19.96A14.09 14.09 0 0110.09 16h3.82A14.09 14.09 0 0112 19.96zM14.34 14H9.66a14.49 14.49 0 010-4h4.68a14.5 14.5 0 010 4zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.16-1.34.16-2.66 0-4h3.38a8.17 8.17 0 010 4h-3.38z"
+                      ></path>
+                    </svg></svg
+                  >English</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" id="hov">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" id="hov"
+                >Trips</a
+              >
+            </li>
+            <li class="nav-item" id="nav-last-item">
+              <a
+                class="nav-link active"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Sign in
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end nvdrp"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <p class="dropdown-item" id="drop-text">
+                    Members can access discounts and <br />
+                    special features
+                  </p>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../Expedia/login/expedia_login.html"
+                    id="drop-btn-primary"
+                    >Sign in</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../Expedia/signup.html"
+                    id="drop-btn"
+                    >Create a free account</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">List of favourites</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Expedia Rewards</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Feedback</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div id="main">
+        <div id="bookingcart">
+          <p id="stays"><a href="index.html">Stays</a></p>
+          <p id="flght"><a href="flight.html">Flights</a></p>
+          <p id="car"><a href="cars.html">Cars</a></p>
+          <p id="pckgs"><a href="packages.html">Packages</a></p>
+          <p id="thngs"><a href="ThingsToDo.html">Things To Do</a></p>
+        </div>
+        <hr />
+        <div id="select">
+          <input
+            type="text"
+            class="divI"
+            id="inputI"
+            placeholder="Leaving from"
+          />
+
+          <div class="choose divII">
+            <svg
+              class="icon"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <svg>
+                <path
+                  d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"
+                ></path>
+              </svg>
+            </svg>
+          </div>
+
+          <input
+            type="text"
+            class="divIII"
+            id="inputII"
+            placeholder="Going to"
+          />
+          <div class="choose divIV">
+            <img
+              class="imge"
+              src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
+              alt="calender"
+            />
+            <p>Departing</p>
+            <p class="info">28 JUN</p>
+          </div>
+          <div class="choose divV">
+            <img
+              class="imge"
+              src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
+              alt="calender"
+            />
+            <p>Returning</p>
+            <p class="info">29 JUN</p>
+          </div>
+          <div id="divVI">
+            <input type="checkbox" id="checkboxneed" /><label for="checkboxneed"
+              >I only need accomodation for part of my trip</label
+            >
+          </div>
+        </div>
+        <div id="btn">
+          <button id="search">Search</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="box1">
+        <div class="box1-content">
+          <h1>Save instantly with Expedia Rewards</h1>
+          <p>
+            You can enjoy access to perks like Member Prices, saving you 10% or
+            more on select hotels. Terms may apply
+          </p>
+          <button>See Member Prices</button>
+        </div>
+      </div>
+      <div class="box2">
+        <p>Book 60 days in advance for 20%</p>
+        <p>Plan ahead and save.</p>
+      </div>
+      <div class="box-3">
+        <img
+          src="https://a.travel-assets.com/mad-service/footer/bnaBanners/BEX_ROME_iStock_72dpi.jpg"
+          alt=""
+          style="width: 350px; height: 300px"
+          class="side-img"
+        />
+
+        <div class="box3-content">
+          <h2>Our app takes you further</h2>
+          <p>
+            When you book on the app you can save up to 10% on select hotels
+            while earning double the points with every booking. With these app
+            deals you'll save even more on trips, and that means you can take
+            more trips, and manage it all on the go.
+          </p>
+          <h3>Text yourself a download link for easy access</h3>
+          <form action="">
+            <label for="mbl">+91</label
+            ><input
+              type="tel"
+              name="mbl"
+              id="mbl"
+              placeholder="Enter Mobile number"
+            />
+            <input type="submit" value="Get the app" />
+          </form>
+          <p>
+            By providing your number, you agree to receive a one-time automated
+            text message with a link to get the app. Standard text message rates
+            may apply.
+          </p>
+        </div>
+
+        <img
+          src="https://a.travel-assets.com/mad-service/qr-code/footer_qr_hp/27_QR_FOOTER_BNA_HP.png"
+          style="width: 250px; height: 250px"
+          alt=""
+        />
+        <!-- <span>Scan QR to download APP</span> -->
+      </div>
+    </main>
+
+    <footer style="margin-top: 40px">
+      <h3 class="heading" style="font-weight: 900; font-size: large">
+        Be inspired and discover more with Expedia
+      </h3>
+      <p><a href="">Discover new places and experiences</a></p>
+      <div id="container">
+        <div id="b1">
+          <img
+            src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+            alt=""
+          />
+        </div>
+        <div id="b2">
+          <h3>Company</h3>
+          <p>
+            <a href="https://www.expediagroup.com/home/default.aspx"
+              >About us</a
+            >
+          </p>
+          <p><a href="https://lifeatexpediagroup.com/">Jobs</a></p>
+          <p>
+            <a
+              href="https://apps.expediapartnercentral.com/en_US/list?utm_medium=referral&utm_source=wwwexpediacom-en_US&utm_campaign=Brand.DTI&utm_contentewd=footer-btn&siteId=1&tpid=1&eapid=0&langId=1033&utm_term=Brand.DTI&lasttouchMktgcode=Brand.DTI"
+              >List your property</a
+            >
+          </p>
+          <p>
+            <a href="https://www.expediagroup.com/partnerships/">Partnership</a>
+          </p>
+        </div>
+        <div id="b3">
+          <h3>Explore</h3>
+          <p>
+            <a href="https://www.expedia.co.in/India.dx80"
+              >India travel guide</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://www.expedia.co.in/Destinations-In-India.d80.Hotel-Destinations"
+              >Hotels in India</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://www.expedia.co.in/Destinations-In-India.d80.Holiday-Rental-Destinations"
+              >Holidays rentals in India</a
+            >
+          </p>
+          <p>
+            <a href="https://www.expedia.co.in/India.d80.Holidays-City-Breaks"
+              >Holiday packages in India</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://www.expedia.co.in/Destinations-In-India.d80.Flight-Destinations"
+              >Domestic flights</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://www.expedia.co.in/Destinations-In-India.d80.Car-Hire-Destinations"
+              >Car hire in India</a
+            >
+          </p>
+          <p>
+            <a href="https://www.expedia.co.in/Accommodation"
+              >All accommodation types</a
+            >
+          </p>
+          <p><a href="https://travelblog.expedia.co.in/">Travel Blog</a></p>
+        </div>
+        <div id="b4">
+          <h3>Terms and Policies</h3>
+          <p>
+            <a href="https://www.expedia.co.in/lp/lg-privacypolicy"
+              >Privacy policy</a
+            >
+          </p>
+          <p>
+            <a href="https://www.expedia.co.in/lp/lg-legal">Terms of use</a>
+          </p>
+          <p>
+            <a
+              href="https://www.vrbo.co.in/en-gb/legal/traveller-terms-and-conditions"
+              >Vrbo terms and conditions</a
+            >
+          </p>
+        </div>
+        <div id="b5">
+          <h3>Help</h3>
+          <p><a href="https://www.expedia.co.in/service/">Support</a></p>
+          <p>
+            <a href="https://www.expedia.co.in/service/#/articles/767/34/19798"
+              >Change and cancel your booking</a
+            >
+          </p>
+          <p>
+            <a href="https://www.expedia.co.in/service/#/articles/767/741/19795"
+              >Refund process and timelines</a
+            >
+          </p>
+          <p>
+            <a href="https://www.expedia.co.in/service/#/articles/767/34/25812"
+              >Book a flight usingan airline credit</a
+            >
+          </p>
+          <p>
+            <a href="https://www.expedia.co.in/service/#/articles/767/52/19788"
+              >International travel documents</a
+            >
+          </p>
+        </div>
+      </div>
+      <div>
+        <hr />
+        <div id="last">
+          <img
+            src="https://images.trvl-media.com/media/content/expind/images/sg/secure.png"
+            alt=""
+          />
+        </div>
+        <p id="spe">
+          © 2022 Expedia, Inc., an Expedia Group company / Expedia Asia Holdings
+          Mauritius / BEX Travel Asia Pte. Ltd. All rights reserved. Expedia and
+          the Airplane Logo are trademarks or registered trademarks of Expedia,
+          Inc.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    let auth = JSON.parse(localStorage.getItem("login"));
+    let logout;
+    if (auth != null) {
+      logout = document.querySelector("#nav-last-item");
+      logout.textContent = "Logout";
+      logout.style.color = "blue";
+      logout.style.fontWeight = "700";
+      logout.style.fontSize = "20px";
+    }
+    logout.addEventListener("click", lgot);
+
+    function lgot() {
+      window.location.href = "../Expedia/login/expedia_login.html";
+      logout.textContent = "Sign in";
+      localStorage.removeItem("login");
+    }
+  </script>
+</html>

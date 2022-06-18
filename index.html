@@ -10,6 +10,247 @@
     <link href="//db.onlinewebfonts.com/c/229a57bbeef591e04a1fdfe347c90864?family=Centra+No2" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="../Expedia/style.css">
     <title>Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp; Airfares</title>
+    <style>
+      #mainI {
+        border: 1px solid grey;
+        width: 90%;
+        margin: auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 10px;
+      }
+      #bookingcart {
+        display: flex;
+        width: 40%;
+        margin: auto;
+        border: 0;
+        margin-top: 1%;
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-synthesis: none;
+        justify-content: space-evenly;
+      }
+      #stays > a,
+      #flght > a,
+      #thngs > a,
+      #pckgs > a,
+      #car > a {
+        text-decoration: none;
+        color: black;
+      }
+      #mainI > #bookingcart > p:hover {
+        border-bottom: 3px solid #3662db;
+        margin-bottom: 7px;
+      }
+      hr {
+        margin-top: 3px;
+        width: 95%;
+        margin-left: 2.5%;
+        background-color: rgb(224, 217, 217);
+      }
+      #select {
+        grid-template-columns: 40% 15% 15% 24%;
+        grid-template-rows: 50px;
+        display: grid;
+        margin: auto;
+        width: auto;
+        margin-top: 2%;
+        margin-left: 3.5%;
+        gap: 10px;
+      }
+      .choose {
+        border: 1px solid grey;
+        display: flex;
+        color: #141d38;
+        font-size: 13px;
+        border-radius: 10px;
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-synthesis: none;
+      }
+      .choose:hover {
+        border: 2px solid #3662db;
+      }
+      .divI {
+        /* width: 155%; */
+        font-size: 15px;
+      }
+      .choose > .imge {
+        width: 10%;
+        margin-right: 2%;
+        height: 50%;
+        margin-top: 6%;
+        margin-left: 7%;
+      }
+      .choose>.imgee{
+        width: 8%;
+        margin-right: 2%;
+        height: 50%;
+        margin-top: 5%;
+        margin-left: 2%;
+      }
+      .choose > p {
+        /* border: 1px solid; */
+        position: absolute;
+        margin: 5px 0px 10px 43px;
+      }
+      #checkit {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 22%;
+        height: auto;
+        margin-top: 2%;
+        margin-left: 3.5%;
+        justify-content: space-between;
+      }
+      #search {
+        padding: 15px 60px 15px 60px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 0;
+        background-color: #3662db;
+        color: white;
+      }
+      #btn {
+        width: 15.5%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      #checkboxflight,
+      #checkboxcar {
+        margin: 0px 8px;
+        transform: scale(1.5);
+      }
+
+      #checkit + label {
+        color: #343b53;
+      }
+      #select > div > p + p {
+        margin-top: 1.6%;
+        font-weight: 600;
+      }
+      #inputI{
+        background-image: url('https://lh3.googleusercontent.com/4m0YVoCHS3DwvoDUBuNjQl_TlVxfGwwvHr44AyOyvKbCC9Jq1rDLwSXj0bHan008KWgk4yA=s85');
+        background-size: 24px;
+        background-position: left;
+        position: left;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid grey;
+        font-size: 17px;
+      }
+      #inputI:hover{
+        border: 2px solid #3662db;
+      }
+
+      @media all and (min-width: 720px) and (max-width: 1000px) {
+        .divI {
+          grid-area: Go;
+        }
+        .divII {
+          grid-area: Cin;
+        }
+        .divIII {
+          grid-area: Cout;
+        }
+        .divIV {
+          grid-area: Trvl;
+        }
+        #mainI {
+          width: 90%;
+        }
+        #select {
+          grid-template-columns: 47.5% 47.5%;
+          grid-template-rows: repeat(3, 50px);
+          grid-template-areas:
+            "Go Go"
+            "Cin Cout"
+            "Trvl Trvl";
+        }
+        .choose > p {
+          margin: 5px 0px 10px 43px;
+        }
+        .choose > .imge {
+          width: 5%;
+          height: 40%;
+          margin-left: 3%;
+          margin-top: 3%;
+        }
+        .choose > .imgee {
+          width: 3%;
+          height: 40%;
+          margin-left: 1%;
+          margin-top: 2%;
+        }
+        #select > div > p + p {
+          margin-top: 2.5%;
+          font-weight: 600;
+        }
+        #bookingcart {
+          width: 100%;
+          font-size: 12px;
+        }
+        #btn {
+          margin-left: 38%;
+        }
+      }
+      @media all and (max-width: 719px) {
+        .divI {
+          grid-area: Go;
+        }
+        .divII {
+          grid-area: Cin;
+        }
+        .divIII {
+          grid-area: Cout;
+        }
+        .divIV {
+          grid-area: Trvl;
+        }
+        #mainI {
+          width: 90%;
+        }
+        #select {
+          grid-template-columns: 47% 47%;
+          grid-template-rows: repeat(3, 50px);
+          grid-template-areas:
+            "Go Go"
+            "Cin Cout"
+            "Trvl Trvl";
+        }
+        .choose > p {
+          margin: 5px 0px 10px 43px;
+        }
+        .choose > .imge {
+          width: 8%;
+          height: 40%;
+          margin-top: 6%;
+          margin-left: 3%;
+        }
+        .choose > .imgee {
+          width: 5%;
+          height: 40%;
+          margin-top: 3%;
+          margin-left: 1.5%;
+        }
+        #select > div > p + p {
+          margin-top: 4%;
+          font-weight: 600;
+        }
+        #bookingcart {
+          width: 100%;
+          font-size: 10px;
+        }
+        #btn {
+          margin-left: 38%;
+        }
+        #search {
+          padding: 10px 20px 10px 20px;
+        }
+      }
+    </style>
    
 </head>
 <body>
@@ -70,7 +311,63 @@
         </div>
       </nav>
       <header>
-
+        <div id="mainI">
+          <div id="bookingcart">
+            <p id="stays"><a href="index.html">Stays</a></p>
+            <p id="flght"><a href="flight.html">Flights</a></p>
+            <p id="car"><a href="cars.html">Cars</a></p>
+            <p id="pckgs"><a href="packages.html">Packages</a></p>
+            <p id="thngs"><a href="ThingsToDo.html">Things To Do</a></p>
+          </div>
+          <hr />
+          <div id="select">
+            <input type="text" class="divI" id="inputI" placeholder="Going to">
+            <div class="choose divII">
+              <img
+                class="imge"
+                src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
+                alt="calender"
+              />
+              <p>Check-in</p>
+              <p class="info">28 JUN</p>
+            </div>
+            <div class="choose divIII">
+              <img
+                class="imge"
+                src="https://cdn.icon-icons.com/icons2/2528/PNG/512/calendar_icon_151795.png"
+                alt="calender"
+              />
+              <p>Check-out</p>
+              <p class="info">29 JUN</p>
+            </div>
+            <div class="choose divIV">
+              <img
+                class="imgee"
+                src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
+                alt="user"
+              />
+              <p>Travellers</p>
+              <p class="info">1 room, 1 traveller</p>
+            </div>
+          </div>
+          <div id="checkit">
+            <div>
+              <input type="checkbox" id="checkboxflight" /><label
+                for="checkboxflight"
+                >Add a flight</label
+              >
+            </div>
+            <div>
+              <input type="checkbox" id="checkboxcar" /><label for="checkboxcar"
+                >Add a car</label
+              >
+            </div>
+          </div>
+          <div id="container"></div>
+          <div id="btn">
+            <button id="search">Search</button>
+          </div>
+        </div>
       </header>
 
 

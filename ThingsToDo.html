@@ -598,7 +598,9 @@
       logout.style.fontWeight = "700";
       logout.style.fontSize = "20px";
     }
-    logout.addEventListener("click", lgot);
+    if(logout != undefined){
+      logout.addEventListener("click", lgot);
+    }
 
     function lgot() {
       window.location.href = "../Expedia/login/expedia_login.html";

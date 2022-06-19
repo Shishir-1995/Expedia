@@ -753,16 +753,17 @@
     }
     function staySearch(){
       let dest = document.querySelector("#input-going-to").value;
+      let from=document.querySelector("#input-leave-from").value;
       let d1 = document.querySelector("#input-depart").value;
       let d2 = document.querySelector("#input-return").value;
 
-      if(dest=="" || d1 == "" || d2 == ""){
+      if(dest=="" || d1 == "" || d2 == "" || from == ""){
         alert("One or more field is missing!");
         return
       }
 
   
-      window.location.href = `https://www.expedia.co.in/Hotel-Search?adults=2&airlineCode&cabinClass=COACH&destination=${dest}%20%28and%20vicinity%29%2C%20Tamil%20Nadu%2C%20India&directFlights=false&endDate=${d2}&infantsInSeats=0&misId=AgjKjN2m1KSD7QgQy5SpmcrGjPCsASC9rpY0~ARIEGgIIAhoxCAESFgoDREVMGMSKsQIqCjIwMjItMDctMDUSFQoDTUFBGMmJCyoKMjAyMi0wNy0wNg&origin=Delhi%2C%20India%20%28DEL-Indira%20Gandhi%20Intl.%29&packageType=fh&partialStay=false&regionId=181449&searchProduct=hotel&semdtl=&sort=RECOMMENDED&startDate=${d1}&theme=&tripType=ROUND_TRIP&useRewards=false&userIntent=`
+      window.location.href = `https://www.expedia.co.in/Hotel-Search?adults=2&airlineCode&cabinClass=COACH&destination=${dest}&directFlights=false&endDate=${d2}&infantsInSeats=0&misId=AgjKjN2m1KSD7QgQy5SpmcrGjPCsASC9rpY0~ARIEGgIIAhoxCAESFgoDREVMGMSKsQIqCjIwMjItMDctMDUSFQoDTUFBGMmJCyoKMjAyMi0wNy0wNg&origin=${from}&packageType=fh&partialStay=false&regionId=181449&searchProduct=hotel&semdtl=&sort=RECOMMENDED&startDate=${d1}&theme=&tripType=ROUND_TRIP&useRewards=false&userIntent=`
     }
   </script>
 </html>

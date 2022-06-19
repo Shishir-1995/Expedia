@@ -245,7 +245,7 @@
         </div>
         <button>Continue</button>
         <div id="bottom">
-          <p>Already have an account? <a href="../Expedia/login/expedia_login.html">Sign in</a></p>
+          <p>Already have an account? <a href="expedia_login.html">Sign in</a></p>
           <br />
           <p>or continue with</p>
           <br />
@@ -290,6 +290,10 @@
         surname: document.getElementById("surname").value,
         password: document.getElementById("password").value,
       };
+      if(obj[email] == "" || obj[name] == "" || obj[password] == ""){
+        alert("Empty field")
+        return
+      }
       alert("SignUp Successfully");
       arr.push(obj);
       localStorage.setItem("userData", JSON.stringify(arr));

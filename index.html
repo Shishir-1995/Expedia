@@ -448,6 +448,7 @@
             class="choose dest"
             id="input-going-to"
             placeholder="Going to"
+            required
           />
           <input
             type="text"
@@ -455,6 +456,7 @@
             id="input-check-in"
             placeholder="Check-in"
             onfocus="(this.type='date')"
+            required
           />
           <input
             type="text"
@@ -462,12 +464,14 @@
             id="input-check-out"
             placeholder="Check-out"
             onfocus="(this.type='date')"
+            required
           />
           <input
-            type="text"
+            type="number"
             class="choose trvlr"
             id="input-trvlr"
-            placeholder="Traveller"
+            placeholder="Number of Travellers"
+            required
           />
         </div>
         <div id="checkit">
@@ -696,7 +700,10 @@
       logout.style.fontWeight = "700";
       logout.style.fontSize = "20px";
     }
-    logout.addEventListener("click", lgot);
+    if(logout != undefined){
+
+      logout.addEventListener("click", lgot);
+    }
 
     function lgot() {
       window.location.href = "../Expedia/login/expedia_login.html";
@@ -714,6 +721,24 @@
         inp.style.display = "none";
       }
     }
+    let searchButton = document.querySelector("#search");
+    searchButton.addEventListener("click",staySearch)
+  
+    function staySearch(){
+      let dest = document.querySelector("#input-going-to").value;
+      let d1 = document.querySelector("#input-check-in").value;
+      let d2 = document.querySelector("#input-check-out").value;
+      let trvlr = document.querySelector("#input-trvlr").value;
+
+      if(dest=="" || d1 == "" || d2 == "" || trvlr == ""){
+        alert("One or more field is missing!");
+        return
+      }
+
+  
+      window.location.href = `https://www.expedia.co.in/Hotel-Search?adults=${trvlr}&d1=${d1}&${d2}&destination=${dest}`
+    }
   </script>
-  <script src="script.js"></script>
+  <script src="script.js">
+  </script>
 </html>

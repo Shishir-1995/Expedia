@@ -3,8 +3,13 @@ let form = document.querySelector("form")
 
 let user_arr = JSON.parse(localStorage.getItem("userData")) ;
 
+
 form.addEventListener("submit",function(event){
     event.preventDefault();
+    if(user_arr == null){
+        alert("Sign up Please!");
+        return
+    }
 
     let userObj = {
         user_email : form.email.value,

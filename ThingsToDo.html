@@ -598,7 +598,10 @@
       logout.style.fontWeight = "700";
       logout.style.fontSize = "20px";
     }
-    logout.addEventListener("click", lgot);
+    if(logout != undefined){
+
+      logout.addEventListener("click", lgot);
+    }
 
     function lgot() {
       window.location.href = "../Expedia/login/expedia_login.html";
@@ -621,7 +624,7 @@
       }
       else{
 
-      window.location.href = 'https://www.expedia.com.sg/things-to-do/search?d1=${d1}&d2=${d2}&endDate=04%2F07%2F2022&location=${things}'
+      window.location.href = `https://www.expedia.com.sg/things-to-do/search?d1=${d1}&d2=${d2}&endDate=04%2F07%2F2022&location=${things}`
     }
   } 
   </script>

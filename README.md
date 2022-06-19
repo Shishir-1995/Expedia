@@ -5,7 +5,7 @@
 
 We have cloned the Expedia website as project of our construct week at** Masai School**. We built this website fully responsive and implemented maximum design.
 > 
-> [Expedia Website]()
+> [Expedia Website](https://expedia-masai.netlify.app/)
  
 
   
@@ -86,7 +86,7 @@ BLOG LINK> [Blog on Expedia Travel] (https://medium.com/@rubynarwal21/clone-of-e
   
 ## Demo
 
->Link - [Expedia Travel]()
+>Link - [Expedia Travel](https://expedia-masai.netlify.app/)
 
 
   

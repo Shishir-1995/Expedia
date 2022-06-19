@@ -605,5 +605,24 @@
       logout.textContent = "Sign in";
       localStorage.removeItem("login");
     }
+
+
+    let btn  = document.querySelector("#search");
+    btn.addEventListener("click", thingsToDo)
+
+    function thingsToDo(){
+      let things = document.querySelector("#input-things").value;
+      let d1 = document.querySelector("#input-from").value;
+      let d2 = document.querySelector("#input-to").value;
+
+      if(things == "" || d1 == "" || d2 == ""){
+        alert("data missing");
+        return
+      }
+      else{
+
+      window.location.href = 'https://www.expedia.com.sg/things-to-do/search?d1=${d1}&d2=${d2}&endDate=04%2F07%2F2022&location=${things}'
+    }
+  } 
   </script>
 </html>

@@ -720,6 +720,11 @@
 
   function flightSearch ()
   {
+    let token = localStorage.getItem("login");
+        if(token == null){
+            alert("Sign in Please! ")
+            return
+        }
     let dstFrom = document.querySelector( "#input-leave-from" ).value;
     let dstTo = document.querySelector( "#input-going-to" ).value;
     let d1 = document.querySelector( "#input-depart" ).value;
@@ -733,6 +738,14 @@
     window.location.href = `https://www.expedia.co.in/Flights-Search?flight-type=on&mode=search&trip=roundtrip&leg1=from%3A${ dstFrom }%2Cto%3A${ dstTo }%2Cdeparture%3A03%2F07%2F2022TANYT&options=cabinclass%3Aeconomy&leg2=from%3A${ dstTo }%2Cto%3A${ dstFrom }%2Cdeparture%3A04%2F07%2F2022TANYT&d1=${ d1 }&d2=${ d2 }`;
 
   }
+
+  let form = document.querySelector("form").addEventListener("submit",mobileReg)
+
+    function mobileReg(){
+        event.preventDefault();
+        let mbl = document.querySelector("#mbl").value;
+        alert(`+91${mbl} number is registered. You will soon recieve the link`)
+    }
 </script>
 
 </html>

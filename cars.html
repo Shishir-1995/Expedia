@@ -86,8 +86,14 @@
       .timeI {
         grid-area: pckt;
       }
+      .timeI::before{
+        content: "Pick up Time :";
+      }
       .timeII {
         grid-area: drpt;
+      }
+      .timeII::before{
+        content: "Drop off Time ";
       }
       .choose {
         border: 1px solid grey;
@@ -495,7 +501,10 @@
           <p>Airpot transport</p>
         </div>
         <div id="select">
-          <input type="text" class="choose pickI" id="input-pick-up" placeholder="Pick-up" />
+          <input type="text" 
+          class="choose pickI" 
+          id="input-pick-up" 
+          placeholder="Pick-up" />
           <input
             type="text"
             class="choose pickII"
@@ -510,6 +519,7 @@
             onfocus="(this.type='date')"
           />
           <input
+          name="pick-time"
             type="text"
             class="choose dateII"
             id="input-drop-date"
@@ -517,16 +527,18 @@
             onfocus="(this.type='date')"
           />
           <input
-            type="text"
+            type="time"
             class="choose timeI"
             id="input-pick-time"
             placeholder="Pick-up time"
+            step="60"
             onfocus="(this.type='time')"
           />
           <input
-            type="text"
+            type="time"
             class="choose timeII"
             id="input-drop-time"
+            step="60"
             placeholder="Drop-off time"
             onfocus="(this.type='time')"
           />
@@ -737,12 +749,38 @@
       logout.style.fontWeight = "700";
       logout.style.fontSize = "20px";
     }
-    logout.addEventListener("click", lgot);
+    if(logout != undefined){
+      logout.addEventListener("click", lgot);
+    }
 
     function lgot() {
       window.location.href = "../Expedia/login/expedia_login.html";
       logout.textContent = "Sign in";
       localStorage.removeItem("login");
     }
+
+    let btn = document.querySelector("#search").addEventListener("click", searchCars);
+
+    function searchCars(){
+      let pickUp = document.querySelector("#input-pick-up").value;
+      let pickDate = document.querySelector("#input-pick-date").value;
+      let dropDate = document.querySelector("#input-drop-date").value;
+      let pickTime = document.querySelector("#input-pick-time").value;
+      let dropTime = document.querySelector("#input-drop-time").value;
+
+      let pickH = ""+pickTime[0]+pickTime[1];
+      let pickM = ""+pickTime[3]+pickTime[4];
+
+      if(pickUp = ""){
+        alert("Pick up Empty");
+        return
+      }
+
+      window.location.href = `https://car-rental.expedia.co.in/en-in/book?pickupName=${pickUp}&returnName=&d1=${pickDate}&d2=${dropDate}&pickupDateTime=${pickDate}3T10%3A30&returnDateTime=2022-07-04T${pickH}%3A${pickM}&pickupIATACode=CAI&returnIATACode=&clientID=388196&residenceID=IN&age=30#/vehicles` 
+
+
+    }
+
+    
   </script>
 </html>

@@ -38,6 +38,9 @@ We have cloned the Expedia website as project of our construct week at** Masai S
 ## A Glimpse of our cloned website
 
    1. This is the landing page where travellers have facility to see top buttons.
+      This is the landing page where travellers have facility to see top buttons.
+       worked on navbar, used flex and justify content space between to make them items at 
+       two ends on the navbar ,used bootstarp in drop menu,For responsiveness used media query and boot strap.
 
 ![Image (1)](https://miro.medium.com/max/875/1*tpGDAseQaPIatn_Ewoj1Vg.png)
 *******************************************************************************
